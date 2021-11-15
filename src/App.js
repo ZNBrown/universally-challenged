@@ -1,11 +1,11 @@
 // App.js
 import React, { Component } from "react";
 import { NavBar } from "./components";
-import { Provider } from "react-redux";
+// import { Provider } from "react-redux";
 import { EntryForm } from "./components";
 
 // import store from "./store";
-import { Home, Questions, Scores, About } from "./pages";
+import { Home, Questions, QuestionsPage, Scores, About } from "./pages";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
@@ -21,6 +21,10 @@ function App() {
 
           <Route path="/questions">
             <Questions />
+          </Route>
+
+          <Route exact path="/QuestionsPage">
+            <QuestionsPage />
           </Route>
 
           <Route path="/categories">
