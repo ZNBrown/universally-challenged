@@ -5,8 +5,8 @@ describe('HomepageSelector', () => {
     test('it renders a selector with the given title', () => {
         render(<HomepageSelector title='test title' />);
         const selector = screen.queryByRole('page selector');
-        const title = screen.queryByRole('heading');
+        const title = screen.queryByRole('heading').textContent;
         expect(selector).toBeInTheDocument;
-        expect(title).toBe('test title');
+        expect(title).toEqual('test title');
     })
 })

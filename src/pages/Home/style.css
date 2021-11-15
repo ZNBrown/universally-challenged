@@ -3,9 +3,11 @@ body {
     font-family: 'Kanit', sans-serif;
 }
 
-a {
-    text-decoration: none;
+#title {
     color: white;
+    font-family: 'Kanit', sans-serif;
+    margin-top: 150px;
+    font-size: 60px;
 }
 
 #cards {
