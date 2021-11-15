@@ -11,7 +11,7 @@ class Score {
         return new Promise(async (res, rej) => {
             try {
 
-                let scoreData = await db.query(`SELECT * FROM Score`)
+                let scoreData = await db.query(`SELECT * FROM scores`)
                 let score = scoreData.rows.map(h => new Score(h))
                 res(score)
 
