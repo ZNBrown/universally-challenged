@@ -16,7 +16,7 @@ export function Home() {
                 </a>
 
                 <a href="/???">
-                    <HomepageCard id='questionmark-card' title='???'/>
+                    <HomepageCard id='questionmark-card' title='[Add another idea here]'/>
                 </a>
 
                 <a href="/about">

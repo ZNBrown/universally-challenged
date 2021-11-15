@@ -1,6 +1,8 @@
 .card {
     text-align: center;
     width: 90vw;
-    border: 2px solid crimson;
     margin: 5px;
+    border: 2px solid black;
+
+    border-radius: 20px;
 }

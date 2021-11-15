@@ -1,5 +1,7 @@
 a {
     text-decoration: none;
+    color: white;
+
 }
 
 .cards {
@@ -9,18 +11,20 @@ a {
 }
 
 #game-card {
-    background-color: green;
+    background-color: #46DF55;
 }
 
 #scores-card {
-    background-color: blue;
+    background-color: #27BEEE;
+    /* border: 2px solid blue; */
 }
 
 #questionmark-card{
-    background-color: yellow;
-
+    background-color: #eb8245;
+    /* border: 2px solid orange; */
 }
 
 #about-card {
-    background-color: red;
+    background-color: #fa6681;
+    /* border: 2px solid red; */
 }
