@@ -1,10 +1,16 @@
+body {
+    background-color: rgb(233, 231, 208);
+    font-family: 'Kanit', sans-serif;
+}
+
 a {
     text-decoration: none;
     color: white;
-
 }
 
-.cards {
+#cards {
+    position: absolute;
+    bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,19 +18,51 @@ a {
 
 #game-card {
     background-color: #46DF55;
+    border-color: #46DF55;
+}
+
+#game-card:hover {
+    background-color: white;
+    border-color: white;
+    color: #46DF55;
+    transition: 0.5s;
 }
 
 #scores-card {
     background-color: #27BEEE;
-    /* border: 2px solid blue; */
+    border-color: #27BEEE;
+}
+
+#scores-card:hover {
+    background-color: white;
+    border-color: white;
+    color: #27BEEE;
+    transition: 0.5s;
+
 }
 
 #questionmark-card{
     background-color: #eb8245;
-    /* border: 2px solid orange; */
+    border-color: #eb8245;
+}
+
+#questionmark-card:hover {
+    background-color: white;
+    border-color: white;
+    color: #eb8245;
+    transition: 0.5s;
+
 }
 
 #about-card {
     background-color: #fa6681;
-    /* border: 2px solid red; */
+    border-color: #fa6681
+}
+
+#about-card:hover {
+    background-color: white;
+    border-color: white;
+    color: #fa6681;
+    transition: 0.5s;
+
 }
