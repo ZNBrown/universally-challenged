@@ -7,7 +7,7 @@ services:
       - PGUSER=universallychallenged
       - PGHOST=db
       - PGPASSWORD=quizpass
-      - PGDATABASE=quizz
+      - PGDATABASE=quiz
       - PGPORT=5432
       - NODE_ENV=development
     depends_on:
@@ -19,7 +19,7 @@ services:
     volumes:
       - "dbdata:/var/lib/postgresql/data"
     environment: 
-      - POSTGRES_DB=quizz
+      - POSTGRES_DB=quiz
       - POSTGRES_USER=universallychallenged
       - POSTGRES_PASSWORD=quizpass
 volumes:
