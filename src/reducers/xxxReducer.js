@@ -1,4 +1,4 @@
-import { ACTION1, ACTION2 } from "..actions/types";
+import { ACTION1, ACTION2 } from "../actions/types";
 
 const initialState = {
   items: [],
