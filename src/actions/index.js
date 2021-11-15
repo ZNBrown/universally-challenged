@@ -56,7 +56,7 @@ export const resetState = () => ({
   payload: [0, " ", 0],
 });
 
-// Replaces symbols
+// Replaces symbols from the trivia API
 export const scrubStr = (str) => {
   const cleanStr = str
     .replaceAll("&quot;", '"')
@@ -66,14 +66,14 @@ export const scrubStr = (str) => {
   return cleanStr;
 };
 
-// //Helper Shuffle function:
-// export const shuffle = (array) => {
-//   let currentIndex = array.length;
-//   let randomIndex;
-//   while (currentIndex !== 0) {
-//     randomIndex = Math.floor(Math.random() * currentIndex);
-//     currentIndex--;
-//     [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-//   }
-//   return array;
-// };
+//Shuffle function:
+export const shuffle = (array) => {
+  let currentIndex = array.length;
+  let randomIndex;
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+  }
+  return array;
+};
