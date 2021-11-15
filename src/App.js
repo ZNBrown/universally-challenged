@@ -10,34 +10,36 @@ import { Switch, Route } from "react-router-dom";
 function App() {
   return (
     // <Provider store={store}>
-    <main>
+    <div>
       <NavBar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
 
-        <Route path="/questions">
-          <Questions />
-        </Route>
+          <Route path="/questions">
+            <Questions />
+          </Route>
 
-        <Route path="/categories">
-          <Categories />
-        </Route>
+          <Route path="/categories">
+            <Categories />
+          </Route>
 
-        <Route path="/scores">
-          <Scores />
-        </Route>
+          <Route path="/scores">
+            <Scores />
+          </Route>
 
-        <Route path="/about">
-          <About />
-        </Route>
+          <Route path="/about">
+            <About />
+          </Route>
 
-        <Route>
-          <h1>&#129429; This page doesn't exist &#129430;</h1>
-        </Route>
-      </Switch>
-    </main>
+          <Route>
+            <h1>&#129429; This page doesn't exist &#129430;</h1>
+          </Route>
+        </Switch>
+      </main>
+    </div>
     // </Provider>
   );
 }

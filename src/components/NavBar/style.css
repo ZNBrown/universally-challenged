@@ -3,16 +3,17 @@
 Navbar
 ===============
 */
-nav {
+links-container {
   background: white;
   box-shadow: lightgrey;
+  display: flex;
+  padding: 20px 0;
 }
 
 .links {
   color: grey;
   font-size: 1rem;
   text-transform: capitalize;
-  display: block;
   padding: 0.5rem 1rem;
   transition: 1s;
 }
@@ -20,12 +21,6 @@ nav {
   background: hsl(205, 86%, 81%);
   color: hsl(205, 75%, 60%);
   padding-left: 1.5rem;
-}
-
-.links-container {
-  height: 0;
-  overflow: hidden;
-  transition: 1s;
 }
 
 @media screen and (min-width: 800px) {
