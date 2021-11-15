@@ -1,10 +1,15 @@
 import React from 'react';
 import './style.css';
 
+import { HomepageCard } from '../../components';
+
 export function Home() {
     return (
-        <div>
-            This is the homepage
-        </div>
+        <>
+            <HomepageCard title='New Game'/>
+            <HomepageCard title='Highscores'/>
+            <HomepageCard title='???'/>
+            <HomepageCard title='About'/>
+        </>
     )
 }
