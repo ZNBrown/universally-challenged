@@ -3,7 +3,7 @@ import { loadQuiz, addUsername, updateDifficulty, resetState } from "../../actio
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-function EntryForm() {
+const EntryForm = () => {
   const [username, setUsername] = useState("");
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
@@ -111,4 +111,4 @@ function EntryForm() {
     </>
   );
 }
-export default EntryForm;
+ export default EntryForm;
