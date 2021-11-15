@@ -6,6 +6,7 @@ async function show(req, res) {
         const score = await Score.findById(scoreId)
         res.status(200).json(score)
     } catch (err) {
+        console.log(err)
         res.status(500).json({ err })
     }
 }
@@ -18,4 +19,14 @@ async function index(req, res) {
         res.status(500).json({ err })
     }
 }
-module.exports = {index, show}
+
+async function create(req, res) {
+    try {
+        const score = await Score.create(req.body)
+        res.status(200).json(score)
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({ err })
+    }
+}
+module.exports = {index, show, create}

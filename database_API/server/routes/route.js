@@ -5,8 +5,10 @@ const scoreController = require('../controller/ScoreController')
 
 
 //Score
-router.get('/allScores', scoreController.index)
-router.get('/:score', scoreController.show)
+router.get('/scores', scoreController.index)
+router.get('/scores/:id', scoreController.show)
+router.post('/scores', scoreController.create)
+
 
 
 
