@@ -1,6 +1,11 @@
-import React from "react";
-import "./style.css";
+
+import React from 'react';
+import './style.css';
 
 export function Questions() {
-  return <div>Question</div>;
+    return (
+        <div>
+            This is the question page
+        </div>
+    )
 }

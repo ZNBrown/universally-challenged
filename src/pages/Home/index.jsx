@@ -1,6 +1,11 @@
-import React from "react";
-import "./style.css";
+
+import React from 'react';
+import './style.css';
 
 export function Home() {
-  return <div>Home</div>;
+    return (
+        <div>
+            This is the homepage
+        </div>
+    )
 }

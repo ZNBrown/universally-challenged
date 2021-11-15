@@ -3,6 +3,7 @@ import thunk from "redux-thunk";
 import rootReducer from "./reducers";
 import { devToolsEnhancer } from "redux-devtools-extension";
 
+
 const initialState = {};
 
 const middleware = [thunk];

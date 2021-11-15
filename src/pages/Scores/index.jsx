@@ -1,6 +1,12 @@
-import React from "react";
-import "./style.css";
+
+import React from 'react';
+import './style.css';
 
 export function Scores() {
-  return <div>Scores</div>;
+    return (
+        <div>
+            This is the scores page
+        </div>
+    )
+
 }

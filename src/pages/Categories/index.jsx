@@ -1,6 +1,12 @@
-import React from "react";
-import "./style.css";
+
+import React from 'react';
+import './style.css';
 
 export function Categories() {
-  return <div>Categories</div>;
+    return (
+        <div>
+            This is the categories page
+        </div>
+    )
 }
+
