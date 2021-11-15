@@ -3,5 +3,9 @@
     width: 90vw;
     margin: 5px;
     border: 2px solid;
-    border-radius: 50px;
+    border-radius: 50px;    
+}
+
+#card-title {
+    font-family: 'Kanit', sans-serif;
 }
