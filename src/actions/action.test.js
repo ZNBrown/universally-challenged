@@ -24,12 +24,12 @@ describe("Question Actions", () => {
     expect(store.getActions()).toEqual(expectedActions);
   });
 
-  it("Dispatches ADD_USER_NUM", () => {
-    const expectedActions = [{ type: "ADD_USER_NUM" }];
-    store.dispatch(addUserNum());
-    const actions = store.getActions();
-    expect(store.getActions()).toEqual(expectedActions);
-  });
+//   it("Dispatches ADD_USER_NUM", () => {
+//     const expectedActions = [{ type: "ADD_USER_NUM" }];
+//     store.dispatch(addUserNum());
+//     const actions = store.getActions();
+//     expect(store.getActions()).toEqual(expectedActions);
+//   });
 
   it("Dispatches updateDifficulty", () => {
     const expectedActions = [{ type: "ADD_DIFFICULTY" }];
