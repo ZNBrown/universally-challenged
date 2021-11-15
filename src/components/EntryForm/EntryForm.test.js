@@ -1,4 +1,4 @@
-import EntryForm from ".";
+import EntryForm from "../EntryForm";
 import { screen, render } from "@testing-library/react";
 // import userEvent from "@testing-library/user-event";
 
