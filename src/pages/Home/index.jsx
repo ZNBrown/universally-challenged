@@ -2,26 +2,26 @@
 import React from 'react';
 import './style.css';
 
-import { HomepageCard } from '../../components';
+import { HomepageSelector } from '../../components';
 
 export function Home() {
     return (
         <>
             <div id="cards">
                 <a href="/categories">
-                    <HomepageCard id='game-card' title='New Game'/>
+                    <HomepageSelector id='game-card' title='New Game'/>
                 </a>
 
                 <a href="/scores">
-                    <HomepageCard id='scores-card' title='Highscores'/>
+                    <HomepageSelector id='scores-card' title='Highscores'/>
                 </a>
 
                 <a href="/???">
-                    <HomepageCard id='questionmark-card' title='???'/>
+                    <HomepageSelector id='questionmark-card' title='???'/>
                 </a>
 
                 <a href="/about">
-                    <HomepageCard id='about-card' title='About'/>
+                    <HomepageSelector id='about-card' title='About'/>
                 </a>
             </div>
         </>
