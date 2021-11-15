@@ -1,7 +1,8 @@
 // App.js
 import React, { Component } from "react";
-import { Greeting } from "./components/Greeting";
+import { NavBar } from "./components";
 import { Provider } from "react-redux";
+
 // import store from "./store";
 import { Home, Questions, Categories, Scores } from './pages';
 import { Switch, Route } from 'react-router-dom';
@@ -26,6 +27,10 @@ function App() {
       <Route path='/scores'>
         <Scores />
       </Route>
+    
+          <Route path="/about">
+            <About />
+          </Route>
 
       <Route>
         <h1>&#129429; This page doesn't exist &#129430;</h1>
@@ -33,6 +38,7 @@ function App() {
 
     </Switch>
     // </Provider>
+
   );
 }
 export default App;
