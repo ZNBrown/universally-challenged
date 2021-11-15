@@ -27,6 +27,10 @@ function App() {
         <Scores />
       </Route>
 
+      <Route>
+        <h1>&#129429; This page doesn't exist &#129430;</h1>
+      </Route>
+
     </Switch>
     // </Provider>
   );
