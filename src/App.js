@@ -1,6 +1,6 @@
 // App.js
 import React, { Component } from "react";
-import { NavBar, CircleTimer } from "./components";
+import { NavBar } from "./components";
 import { Provider } from "react-redux";
 import { EntryForm } from "./components";
 
@@ -21,7 +21,6 @@ function App() {
 
           <Route path="/questions">
             <Questions />
-            <CircleTimer />
           </Route>
 
           <Route path="/categories">

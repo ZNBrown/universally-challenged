@@ -1,11 +1,10 @@
-
 import React from 'react';
 import './style.css';
 
+import { Question } from '../../components';
+
 export function Questions() {
     return (
-        <div>
-            This is the question page
-        </div>
+        <Question />
     )
 }
