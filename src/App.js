@@ -2,9 +2,10 @@
 import React, { Component } from "react";
 import { NavBar } from "./components";
 import { Provider } from "react-redux";
+import { EntryForm } from "./components";
 
 // import store from "./store";
-import { Home, Questions, Categories, Scores, About } from "./pages";
+import { Home, Questions, Scores, About } from "./pages";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
           </Route>
 
           <Route path="/categories">
-            <Categories />
+            <EntryForm />
           </Route>
 
           <Route path="/scores">
