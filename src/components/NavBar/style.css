@@ -1,0 +1,27 @@
+/*
+=============== 
+Navbar
+===============
+*/
+links-container {
+  background: white;
+  box-shadow: lightgrey;
+  display: flex;
+  padding: 20px 0;
+}
+
+.links {
+  color: grey;
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  transition: 1s;
+}
+.links a:hover {
+  background: hsl(205, 86%, 81%);
+  color: hsl(205, 75%, 60%);
+  padding-left: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+}
