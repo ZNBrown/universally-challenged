@@ -4,7 +4,7 @@ import './style.css';
 export function Home() {
     return (
         <div>
-            Hello
+            This is the homepage
         </div>
     )
 }

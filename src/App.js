@@ -4,14 +4,30 @@ import { Greeting } from "./components/Greeting";
 import { Provider } from "react-redux";
 // import store from "./store";
 import { Home, Questions, Categories, Scores } from './pages';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     // <Provider store={store}>
-    <>
-      <Greeting />
-      <h1>This is the app</h1>
-    </>
+    <Switch>
+
+      <Route exact path='/'>
+        <Home />
+      </Route>
+
+      <Route path='/questions'>
+        <Questions />
+      </Route>
+
+      <Route path='/categories'>
+        <Categories />
+      </Route>
+
+      <Route path='/scores'>
+        <Scores />
+      </Route>
+
+    </Switch>
     // </Provider>
   );
 }

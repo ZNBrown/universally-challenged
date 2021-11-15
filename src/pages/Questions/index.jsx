@@ -4,7 +4,7 @@ import './style.css';
 export function Questions() {
     return (
         <div>
-            Hello
+            This is the question page
         </div>
     )
 }

@@ -4,7 +4,7 @@ import './style.css';
 export function Categories() {
     return (
         <div>
-            Hello
+            This is the categories page
         </div>
     )
 }

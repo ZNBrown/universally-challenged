@@ -4,7 +4,7 @@ import './style.css';
 export function Scores() {
     return (
         <div>
-            Hello
+            This is the scores page
         </div>
     )
 }
