@@ -1,0 +1,26 @@
+a {
+    text-decoration: none;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-card {
+    background-color: green;
+}
+
+#scores-card {
+    background-color: blue;
+}
+
+#questionmark-card{
+    background-color: yellow;
+
+}
+
+#about-card {
+    background-color: red;
+}

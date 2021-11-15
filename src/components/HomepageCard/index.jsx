@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 
-export function HomepageCard({ title }) {
+export function HomepageCard({ title, id }) {
     return (
-        <div>
+        <div className='card' id={id}>
             <h1>{title}</h1>
         </div>
     )
