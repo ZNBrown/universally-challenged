@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
 
-export function AnswerSelector({answer}) {
+export function AnswerSelector({answer, id}) {
     return (
-        <h1 id='answer-selector'>{answer}</h1>
+        <p className='card answer-selector' id={id}>{answer}</p>
     )
 }
