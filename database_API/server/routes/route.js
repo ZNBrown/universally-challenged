@@ -4,13 +4,15 @@ const scoreController = require('../controller/ScoreController')
 
 
 
-//Score
+//Create
+router.post('/scores', scoreController.create)
+//Read
 router.get('/scores', scoreController.index)
 router.get('/scores/:id', scoreController.show)
-router.post('/scores', scoreController.create)
-
-
-
+//Update
+router.patch('/scores/:id', scoreController.update)
+//Delete
+router.delete('/scores/:id', scoreController.del)
 
 
 module.exports = router;
