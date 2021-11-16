@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Timer321 } from "../../components";
+import { Timer321, CollapsibleCard } from "../../components";
 
 export function About() {
   return (
@@ -9,6 +9,9 @@ export function About() {
       <h2>Description</h2>
       <h2>Game Modes</h2>
       <h2>Instructions</h2>
+      <CollapsibleCard label='Click Here'>
+        <p>About</p>
+      </CollapsibleCard>
       <Timer321 />
     </section>
   );
