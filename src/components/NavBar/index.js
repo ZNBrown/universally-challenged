@@ -44,7 +44,7 @@ const NavBar = () => {
         </NavLink>
         
         <NavLink onClick={closeNav} className="links" to="/scores">
-          Higghscores
+          Highscores
         </NavLink>      
 
         <NavLink onClick={closeNav} className="links" to="/about">
