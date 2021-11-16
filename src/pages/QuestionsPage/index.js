@@ -72,7 +72,7 @@ const QuestionsPage = () => {
             </div>
 
             <div>
-              <h1>
+              <h1 className="circleTimer">
                 <CountdownCircleTimer
                   onComplete={() => {
                     setCountdownKey((prevCountdownKey) => prevCountdownKey + 1);
