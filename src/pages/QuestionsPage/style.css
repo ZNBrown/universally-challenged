@@ -10,7 +10,8 @@ circleTimer{
 }
 .answersGrid {
     display:grid;
-    grid-template-columns: repeat(2, 1fr);    
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto auto auto 1fr;
 }
 
 .questionNumber{
@@ -155,9 +156,10 @@ circleTimer{
     transition: All 250ms ease;
     cursor: pointer;
     display: block;
+    margin-top: 20px;
+    margin-bottom:20px;
     margin-left: auto;
     margin-right: auto;
-    margin-top:20px;
     width: 350px;
     
 }
@@ -206,7 +208,8 @@ circleTimer{
     display:block;
     margin-left: auto;
     margin-right: auto;
-    margin-top:20px;
+    margin-top: 20px;
+    margin-bottom:20px;
     width: 350px;
     
 }
