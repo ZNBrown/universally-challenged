@@ -1,7 +1,12 @@
 .card {
     text-align: center;
     width: 90vw;
-    margin: 5px;
+    margin: 5px 0;
     border: 2px solid;
-    border-radius: 50px;
+    border-radius: 50px;    
+}
+
+#card-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 30px;
 }

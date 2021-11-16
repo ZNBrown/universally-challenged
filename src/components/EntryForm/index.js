@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { loadQuiz, addUsername, updateDifficulty, resetState } from "../../actions";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import "./style.css";
 
 const EntryForm = () => {
   const [username, setUsername] = useState("");
@@ -15,8 +16,7 @@ const EntryForm = () => {
     dispatch(loadQuiz(category, difficulty));
     dispatch(addUsername(username));
     dispatch(updateDifficulty(difficulty));
-    // whatever the previous page will be called
-    // history.push("/QuestionPage");
+    history.push("/QuestionsPage");
   };
 
   const reset = () => {
@@ -43,11 +43,11 @@ const EntryForm = () => {
       {reset()}
       <div>
         <div>
-          <h1>Quiz Name Here</h1>
+          <h1 className="titleHeading">Quiz Name Here</h1>
         </div>
-        <h2 className='text-center text-2xl py-3'> Let's start a quiz! </h2>
+        <h2 className="titleIntro"> Let's start a quiz! </h2>
         <form aria-label='userForm' role='form' onSubmit={handleSubmit}>
-          <label placeholder='Enter Username' htmlFor='username'>
+          <label className="username" placeholder='Enter Username' htmlFor='username'>
             Username:
           </label>
           <input
@@ -59,7 +59,7 @@ const EntryForm = () => {
             onChange={updateUsername}
             required
           />
-          <label htmlFor='categorySelect'>
+          <label className="category" htmlFor='categorySelect'>
             Category:
           </label>
           <select
@@ -83,7 +83,7 @@ const EntryForm = () => {
             <option value='14'>Television</option>
             <option value='20'>Mythology</option>
           </select>
-          <label htmlFor='difficultySelect'>
+          <label className="difficulty" htmlFor='difficultySelect'>
             Difficulty:
           </label>
           <select
@@ -101,6 +101,7 @@ const EntryForm = () => {
             <option value='hard'>Hard</option>
           </select>
           <input
+            className="inputButton"
             type='submit'
             value='Submit'
           />
@@ -111,4 +112,4 @@ const EntryForm = () => {
     </>
   );
 }
- export default EntryForm;
+export default EntryForm;
