@@ -10,10 +10,10 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 } */
-* {
+body {
   font-family: "Noto Serif Display", "Raleway", sans-serif;
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+  background: lightgrey;
+  color: darkgrey;
   line-height: 1.5;
   font-size: 0.875rem;
   text-align: center;
