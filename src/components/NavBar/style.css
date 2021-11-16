@@ -11,6 +11,11 @@ Navbar
   display: none;
 }
 
+#btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 links-container {
   background: white;
   box-shadow: lightgrey;

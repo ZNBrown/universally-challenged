@@ -25,22 +25,28 @@ const NavBar = () => {
 
   return (
     <>
-      <div ref= {navBtn} id='nav-btn-burger' onClick={showNav}>&#9776;</div>
+      <div id='btn-container'>
+        <BackButton />
+        <div ref= {navBtn} id='nav-btn-burger' onClick={showNav}>&#9776;</div>        
+      </div>
+
       <nav ref={navBar} id='hide' className="links-container" role="navigation">
         <NavLink className="links" to="/">
           Home
         </NavLink>
+        
         <NavLink className="links" to="/Leaderboard">
           Leaderboard
         </NavLink>
+
         <NavLink className="links" to="/categories">
           New Quiz
         </NavLink>
+
         <NavLink className="links" to="/about">
           About
         </NavLink>
-        <BackButton />
-      </nav>
+      </nav>      
     </>
   );
 };
