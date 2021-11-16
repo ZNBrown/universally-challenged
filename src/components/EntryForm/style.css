@@ -1,0 +1,87 @@
+.titleHeading {
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.titleIntro {
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.username {
+    font-family: 'Kanit', sans-serif;
+    color: red;
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.category {
+    color: green;
+    font-family: 'Kanit', sans-serif;
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.difficulty {
+    color:blue;
+    font-family: 'Kanit', sans-serif;
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.inputButton {
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    background: #5D3FD3;
+    padding: 5px 40px;
+    margin: 0 10px;
+    border: 1px solid #5D3FD3;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 0px #311e7f;
+    -moz-box-shadow: 0px 5px 0px #311e7f;
+    -ms-box-shadow: 0px 5px 0px #311e7f;
+    -o-box-shadow: 0px 5px 0px #311e7f;
+    box-shadow: 0px 5px 0px #311e7f;
+    color: white;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor: pointer;
+    display:block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+  
+  }
+  /*==========  Active State  ==========*/
+  .inputButton:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
+  }
+
