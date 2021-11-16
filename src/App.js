@@ -10,7 +10,7 @@ import {
   QuestionsPage,
   Scores,
   About,
-  Categories,
+  UserPage,
 } from "./pages";
 import { Switch, Route } from "react-router-dom";
 
@@ -34,9 +34,9 @@ function App() {
             <QuestionsPage />
           </Route>
 
-          <Route path="/categories">
+          <Route path="/UserPage">
             <NavBar />
-            <Categories />
+            <UserPage />
           </Route>
 
           <Route path="/scores">

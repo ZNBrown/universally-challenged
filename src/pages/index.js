@@ -1,4 +1,4 @@
-export { Categories } from "./Categories";
+export { UserPage } from "./UserPage";
 export { Home } from "./Home";
 export { Questions } from "./Questions";
 export { Scores } from "./Scores";
