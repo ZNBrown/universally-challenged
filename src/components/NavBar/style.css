@@ -3,6 +3,14 @@
 Navbar
 ===============
 */
+#show {
+  display: unset;
+}
+
+#hide {
+  display: none;
+}
+
 links-container {
   background: white;
   box-shadow: lightgrey;
