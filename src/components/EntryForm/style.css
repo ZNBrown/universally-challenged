@@ -1,20 +1,28 @@
 .titleHeading {
     font-family: 'Kanit', sans-serif;
+    color:white;
 
 }
 
 .titleIntro {
     font-family: 'Kanit', sans-serif;
+    color: #fa6681;
 
 }
 
 input[type=text]{
-    background-color: red;
     border-radius: 5px;
+    width: 250px;
+    height:40px;
+    padding-left: 15px;
+    box-sizing:border-box;
 }
 select {
-    color:red;
     border-radius: 5px;
+    width: 250px;
+    height:40px;
+    text-align:center;
+   
 }
 
 .username {
