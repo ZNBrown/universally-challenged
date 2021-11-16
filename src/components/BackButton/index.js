@@ -5,7 +5,7 @@ import './style.css';
 const BackButton = () => {
   let history = useHistory();
 
-  return <button id='back-btn' onClick={history.goBack}>&larr;</button>;
+  return <div id='back-btn' onClick={history.goBack}>&larr;</div>;
 };
 
 export { BackButton };
