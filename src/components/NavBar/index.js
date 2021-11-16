@@ -9,14 +9,11 @@ const NavBar = () => {
       <NavLink className="links" to="/">
         Home
       </NavLink>
-      <NavLink className="links" to="/questions">
-        Questions
+      <NavLink className="links" to="/categories">
+        New Game
       </NavLink>
       <NavLink className="links" to="/scores">
-        Scores
-      </NavLink>
-      <NavLink className="links" to="/categories">
-        Categories
+        Highscores
       </NavLink>
       <NavLink className="links" to="/about">
         About

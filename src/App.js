@@ -2,17 +2,22 @@
 import React, { Component } from "react";
 import { NavBar } from "./components";
 // import { Provider } from "react-redux";
-import { EntryForm } from "./components";
 
 // import store from "./store";
-import { Home, Questions, QuestionsPage, Scores, About } from "./pages";
+import {
+  Home,
+  Questions,
+  QuestionsPage,
+  Scores,
+  About,
+  Categories,
+} from "./pages";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     // <Provider store={store}>
     <div>
-      <NavBar />
       <main>
         <Switch>
           <Route exact path="/">
@@ -20,26 +25,32 @@ function App() {
           </Route>
 
           <Route path="/questions">
+            <NavBar />
             <Questions />
           </Route>
 
           <Route exact path="/QuestionsPage">
+            <NavBar />
             <QuestionsPage />
           </Route>
 
           <Route path="/categories">
-            <EntryForm />
+            <NavBar />
+            <Categories />
           </Route>
 
           <Route path="/scores">
+            <NavBar />
             <Scores />
           </Route>
 
           <Route path="/about">
+            <NavBar />
             <About />
           </Route>
 
           <Route>
+            <NavBar />
             <h1>&#129429; This page doesn't exist &#129430;</h1>
           </Route>
         </Switch>

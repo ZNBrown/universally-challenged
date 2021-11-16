@@ -1,12 +1,11 @@
-
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
+import { EntryForm } from "../../components";
 
 export function Categories() {
-    return (
-        <div>
-            This is the categories page
-        </div>
-    )
+  return (
+    <div>
+      <EntryForm />
+    </div>
+  );
 }
-
