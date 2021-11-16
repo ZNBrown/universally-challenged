@@ -4,15 +4,12 @@ Navbar
 ===============
 */
 #show {
-  display: unset;
-  z-index: 50;
-  transform: translateY(0%);
-  color: pink;
+  transform: translateY(0);
 }
 
 #hide {
   display: none;
-  transform: translateY(90%);  
+  transform: translateY(100%);  
 }
 
 #btn-container {
@@ -32,32 +29,26 @@ Navbar
 #nav-btn-cross {
   font-size: 80px;
   color: red;
+  top: -25px;
 }
 
 .links-container {
-  background: white;
-  box-shadow: lightgrey;
-  display: flex;
-  flex-direction: column;
+  background: #5D3FD3;
   position: fixed;
   bottom: 0;
   height: 100vh;
   width: 100vw;
   left: 0;
   transition: 0.5s;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .links {
-  color: grey;
-  font-size: 1rem;
-  text-transform: capitalize;
-  padding: 0.5rem 1rem;
-  transition: 1s;
-}
-.links a:hover {
-  background: hsl(205, 86%, 81%);
-  color: hsl(205, 75%, 60%);
-  padding-left: 1.5rem;
+  color: white;
+  font-size: 40px;
 }
 
 @media screen and (min-width: 800px) {
