@@ -142,6 +142,7 @@ const QuestionsPage = () => {
                 {" "}
                 {scrubStr(results[currentQuestionIndex].question)}{" "}
               </p>
+
               <div className="answersGrid">
                 {answers.map((t, i) => (
                   <button
@@ -156,6 +157,7 @@ const QuestionsPage = () => {
                   </button>
                 ))}
               </div>
+             
             </div>
           </div>
         </Countdown>
