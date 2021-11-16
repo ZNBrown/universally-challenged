@@ -3,11 +3,39 @@
 Navbar
 ===============
 */
-links-container {
+#show {
+  display: unset;
+  z-index: 50;
+  transform: translateY(0%);
+  color: pink;
+}
+
+#hide {
+  display: none;
+  transform: translateY(100%);  
+}
+
+#btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav-btn-burger, #nav-btn-cross {
+  font-size: 45px;
+  color: black;
+  cursor: pointer;
+  z-index: 600;
+}
+
+.links-container {
   background: white;
   box-shadow: lightgrey;
   display: flex;
   padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  height: 100vh;
+  transition: 0.5s;
 }
 
 .links {
