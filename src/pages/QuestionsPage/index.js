@@ -105,7 +105,7 @@ const QuestionsPage = () => {
                   <button
                     role='button'
                     name='answerButton'
-                    className='inputButton'
+                    id={i}
                     onClick={sendAnswer}
                     value={t}
                   >
