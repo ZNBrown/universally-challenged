@@ -9,7 +9,7 @@ export function Home() {
       <h1 id="title">Universally Challenged</h1>
 
       <div id="cards">
-        <a href="/categories">
+        <a href="/UserPage">
           <HomepageSelector id="game-card" title="New Game" />
         </a>
 

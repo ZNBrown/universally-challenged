@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { EntryForm } from "../../components";
 
-export function Categories() {
+export function UserPage() {
   return (
     <div>
       <EntryForm />
