@@ -7,6 +7,10 @@ const NavBar = () => {
   const navBtn = useRef();
   const navBar = useRef();
 
+  const closeNav = () => {
+    navBtn.current.innerHTML = '&#9776;';
+    navBtn.current.id = 'nav-btn-burger';
+    navBar.current.id = 'hide'  }
 
   const showNav = () => {
     switch (navBtn.current.id) {
@@ -31,19 +35,19 @@ const NavBar = () => {
       </div>
 
       <nav ref={navBar} id='hide' className="links-container" role="navigation">
-        <NavLink className="links" to="/">
+        <NavLink onClick={closeNav} className="links" to="/">
           Home
         </NavLink>
 
-        <NavLink className="links" to="/categories">
+        <NavLink onClick={closeNav} className="links" to="/categories">
           New Quiz
         </NavLink>
         
-        <NavLink className="links" to="/Leaderboard">
+        <NavLink onClick={closeNav} className="links" to="/Leaderboard">
           Leaderboard
         </NavLink>      
 
-        <NavLink className="links" to="/about">
+        <NavLink onClick={closeNav} className="links" to="/about">
           About
         </NavLink>
       </nav>      
