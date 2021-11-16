@@ -1,0 +1,14 @@
+#back-btn {
+    background-color: #5D3FD3;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 40px;
+    width: 15vw;
+    padding-bottom: 10px;
+    opacity: 0.8;
+}
+
+#back-btn:active {
+    opacity: 1;
+}

@@ -22,12 +22,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
-
-          <Route path="/questions">
-            <NavBar />
-            <Questions />
-          </Route>
+          </Route> 
 
           <Route exact path="/QuestionsPage">
             <NavBar />
@@ -41,6 +36,7 @@ function App() {
 
           <Route path="/scores">
             <NavBar />
+
             <Scores />
           </Route>
 

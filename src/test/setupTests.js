@@ -9,10 +9,15 @@ import { createStore } from "redux";
 import { searchReducer } from "../reducers";
 
 const TestProviders = ({ initState }) => {
-  initState ||= {
-    date: "",
-    result: { sunrise: "", sunset: "" },
+  initState = {
     loading: false,
+    questionIndex: 0,
+    username: "",
+    category: "",
+    difficulty: "",
+    result: [{ question: "", correctAnswer: "", incorrectAnswers: [] }],
+    score: 0,
+    userNum: 0,
   };
   let testReducer = () => searchReducer(initState, { type: "@@INIT" });
   const testStore = createStore(testReducer);
