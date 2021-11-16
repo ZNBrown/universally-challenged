@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
 
-import { HomepageSelector, BackButton } from "../../components";
+import { HomepageSelector } from "../../components";
 
 export function Home() {
   return (
     <>
-      <h1 id="title">Universally Challenged</h1>
+      <h1 id="title">Kahtwoot!</h1>
 
       <div id="cards">
         <a href="/categories">
