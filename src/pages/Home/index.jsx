@@ -8,7 +8,7 @@ export function Home() {
     return (
         <>
 
-            <h1 id='title'>Universally Challenged</h1>
+            <h1 id='title'>Kahtwoot</h1>
 
             <div id="cards">
                 <a href="/categories">
