@@ -30,6 +30,12 @@ Navbar
   font-size: 80px;
   color: red;
   top: -25px;
+  opacity: 0.5;
+  font-weight: 100;
+}
+
+#nav-btn-cross:hover {
+  opacity: 1;
 }
 
 .links-container {
@@ -48,7 +54,12 @@ Navbar
 
 .links {
   color: white;
+  opacity: 0.5;
   font-size: 40px;
+}
+
+.links:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 800px) {
