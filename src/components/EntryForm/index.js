@@ -48,7 +48,7 @@ export const EntryForm = () => {
       {reset()}
       <div>
         <div>
-          <h1 className="titleHeading">Quiz Name Here</h1>
+          <h1 className="titleHeading">Universally Challenged</h1>
         </div>
         <h2 className="titleIntro"> Let's start a quiz! </h2>
         <form aria-label="userForm" role="form" onSubmit={handleSubmit}>
@@ -81,16 +81,17 @@ export const EntryForm = () => {
             <option value="DEFAULT" disabled>
               Pick a Category...{" "}
             </option>
-            <option value="any">Random Category</option>
-            <option value="9">General Knowledge</option>
-            <option value="22">Geography</option>
-            <option value="17">Science and Nature</option>
-            <option value="11">Film</option>
-            <option value="27">Animals</option>
-            <option value="18">Science: Computers</option>
-            <option value="15">Video Games</option>
-            <option value="14">Television</option>
-            <option value="20">Mythology</option>
+            <option value='9'>General Knowledge</option>
+            <option value='31'>Japanese Anime and Manga</option>
+            <option value='22'>Geography</option>
+            <option value='17'>Science and Nature</option>
+            <option value='11'>Film</option>
+            <option value='27'>Animals</option>
+            <option value='18'>Science: Computers</option>
+            <option value='15'>Video Games</option>
+            <option value='14'>Television</option>
+            <option value='20'>Mythology</option>
+
           </select>
           <label className="difficulty" htmlFor="difficultySelect">
             Difficulty:

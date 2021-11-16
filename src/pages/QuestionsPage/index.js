@@ -60,15 +60,18 @@ const QuestionsPage = () => {
     ]);
 
     return (
-      <div role="questionPage">
-        <Countdown date={Date.now() + 5000} key={countdownKey}>
+
+      <div role='questionPage'>
+        <Countdown date={Date.now() + 1000} key={countdownKey}>
+
           <div>
             <div>
-              <p>Question {currentQuestionIndex + 1} </p>
+              <p className="questionNumber">Question {currentQuestionIndex + 1} </p>
               <h3> Score: {currentScore} </h3>
             </div>
 
             <div>
+
               <h1>
                 <Timer />
               </h1>
@@ -76,19 +79,26 @@ const QuestionsPage = () => {
 
             <br></br>
             <div>
-              <p> {scrubStr(results[currentQuestionIndex].question)} </p>
-              <div>
+
+              <p className="questionTitle">
+                {" "}
+                {scrubStr(results[currentQuestionIndex].question)}{" "}
+              </p>
+              <div className="answersGrid">
+              
                 {answers.map((t, i) => (
                   <button
-                    role="button"
-                    name="answerButton"
-                    id={i}
+                    role='button'
+                    name='answerButton'
+                    className='answersButton'
+                    idkey={i}
                     onClick={sendAnswer}
                     value={t}
                   >
                     {t}
                   </button>
                 ))}
+          
               </div>
             </div>
           </div>
