@@ -7,6 +7,9 @@ import { HomepageSelector } from '../../components';
 export function Home() {
     return (
         <>
+
+            <h1 id='title'>Universally Challenged</h1>
+
             <div id="cards">
                 <a href="/categories">
                     <HomepageSelector id='game-card' title='New Game'/>

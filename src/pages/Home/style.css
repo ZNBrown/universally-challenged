@@ -3,22 +3,26 @@ body {
     font-family: 'Kanit', sans-serif;
 }
 
-a {
-    text-decoration: none;
+#title {
     color: white;
+    font-family: 'Kanit', sans-serif;
+    margin-top: 150px;
+    font-size: 60px;
 }
 
 #cards {
     position: absolute;
     bottom: 20px;
+    left: 5vw;
+    right: 5vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 #game-card {
     background-color: #46DF55;
     border-color: #46DF55;
+    color: white;
 }
 
 #game-card:hover {
@@ -31,6 +35,7 @@ a {
 #scores-card {
     background-color: #27BEEE;
     border-color: #27BEEE;
+    color: white;
 }
 
 #scores-card:hover {
@@ -44,6 +49,7 @@ a {
 #questionmark-card{
     background-color: #eb8245;
     border-color: #eb8245;
+    color: white;
 }
 
 #questionmark-card:hover {
@@ -56,7 +62,8 @@ a {
 
 #about-card {
     background-color: #fa6681;
-    border-color: #fa6681
+    border-color: #fa6681;
+    color: white;
 }
 
 #about-card:hover {
