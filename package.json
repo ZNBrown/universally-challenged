@@ -1,43 +1,32 @@
 {
-  "name": "universally-challenged",
+  "name": "universally-challenged-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve --mode development --config config/webpack.config.dev.js",
-    "build": "webpack --config config/webpack.config.production.js"
+    "start": "node server.js",
+    "dev": "nodemon index.js",
+    "seedDev": "node dbConfig/seedDev.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZNBrown/universally-challenged.git"
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ZNBrown/universally-challenged/issues"
-  },
-  "homepage": "https://github.com/ZNBrown/universally-challenged#readme",
-  "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-transform-runtime": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
-    "@babel/preset-react": "^7.16.0",
-    "babel-loader": "^8.2.3",
-    "css-loader": "^6.5.1",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.5.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.64.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.4.0"
-  },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
-    "redux": "^4.1.2",
-    "redux-thunk": "^2.4.0"
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.14",
+    "supertest": "^6.1.6"
   }
 }

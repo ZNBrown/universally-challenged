@@ -1,1 +1,0 @@
-INSERT INTO scores (username, score) VALUES ('user1','1');
