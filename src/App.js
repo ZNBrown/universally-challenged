@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import { NavBar } from "./components";
 // import { Provider } from "react-redux";
-import { EntryForm } from "./components";
 
 // import store from "./store";
 import {
