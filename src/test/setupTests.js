@@ -1,8 +1,9 @@
 import React from "react";
 
-import "@testing-library/jest-dom";
+import "@testing-library/jest-dom/extend-expect";
 
 import { render } from "@testing-library/react";
+import userEvent from '@testing-library/user-event';
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 
@@ -32,3 +33,4 @@ const renderWithReduxProvider = (ui, options = {}) => {
 
 global.renderWithReduxProvider = renderWithReduxProvider;
 global.React = React;
+global.userEvent = userEvent;
