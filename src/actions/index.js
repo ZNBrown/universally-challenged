@@ -59,7 +59,8 @@ export const resetState = () => ({
 // Replaces symbols from the trivia API
 export const scrubStr = (str) => {
   const cleanStr = str
-    .replaceAll("&quot;", '"')
+    // .replaceAll("&quot;", '"')
+    .replaceAll("&quot;" , '"')
     .replaceAll("&#039;", "'")
     .replaceAll("&eacute;", "e")
     .replaceAll("&amp; ", " & ")

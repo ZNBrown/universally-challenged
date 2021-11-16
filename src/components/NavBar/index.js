@@ -39,12 +39,12 @@ const NavBar = () => {
           Home
         </NavLink>
 
-        <NavLink onClick={closeNav} className="links" to="/categories">
-          New Quiz
+        <NavLink onClick={closeNav} className="links" to="/UserPage">
+          New Game
         </NavLink>
         
-        <NavLink onClick={closeNav} className="links" to="/Leaderboard">
-          Leaderboard
+        <NavLink onClick={closeNav} className="links" to="/scores">
+          Higghscores
         </NavLink>      
 
         <NavLink onClick={closeNav} className="links" to="/about">
