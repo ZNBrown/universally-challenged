@@ -8,8 +8,7 @@ Navbar
 }
 
 #hide {
-  display: none;
-  transform: translateY(100%);  
+  transform: translateY(-100%);  
 }
 
 #btn-container {
@@ -31,12 +30,12 @@ Navbar
   color: red;
   top: -25px;
   opacity: 0.5;
-  font-weight: 100;
 }
 
-#nav-btn-cross:hover {
+#nav-btn-cross:active {
   opacity: 1;
 }
+
 
 .links-container {
   background: #5D3FD3;
@@ -54,13 +53,11 @@ Navbar
 
 .links {
   color: white;
-  opacity: 0.5;
   font-size: 40px;
 }
 
-.links:hover {
-  opacity: 1;
+.links:active {
+  color: blue;
 }
-
 @media screen and (min-width: 800px) {
 }
