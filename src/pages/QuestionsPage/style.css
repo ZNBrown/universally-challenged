@@ -11,8 +11,8 @@ circleTimer{
 .answersGrid {
     display:grid;
     grid-template-columns: repeat(2, 1fr);    
-    grid-gap: 5px;
 }
+
 .questionNumber{
     font-size:25px;
 }
@@ -21,15 +21,26 @@ circleTimer{
     font-size: 30px;
 }
 
-[idkey = "0"] {
+
+[idkey ="0"]:hover {
+   
+    color: #289633;
+    transition: 0.5s;
+}
+
+[idkey ="0"]{
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
     text-decoration: none;
     font-size: 20px;
     background: #46DF55;
     padding: 40px 40px;
-    margin: 5px 10px;
+    margin: 0 10px;
     border: 1px solid #46DF55;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
+    border-radius: 5px;
     -webkit-box-shadow: 0px 5px 0px #289633;
     -moz-box-shadow: 0px 5px 0px #289633;
     -ms-box-shadow: 0px 5px 0px #289633;
@@ -41,31 +52,41 @@ circleTimer{
     -o-transition: All 250ms ease;
     -ms-transition: All 250ms ease;
     transition: All 250ms ease;
-    cursor: pointer; 
-    border-radius: 20px;
+    cursor: pointer;
+    display:block;
+  
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
     
 }
 
-[idkey = "0"]:active {
--webkit-box-shadow: none !important;
--moz-box-shadow: none !important;
--ms-box-shadow: none !important;
--o-box-shadow: none !important;
-box-shadow: none !important;
--webkit-transition: All 250ms ease;
--moz-transition: All 250ms ease;
--o-transition: All 250ms ease;
--ms-transition: All 250ms ease;
-transition: All 250ms ease;
-cursor:pointer;
+[idkey ="0"]:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
 }
 
-[idkey = "1"] {
+
+[idkey ="1"] {
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
     text-decoration: none;
     font-size: 20px;
     background: #27BEEE;
     padding: 40px 40px;
-    margin: 5px 10px;
+    margin: 0 10px;
     border: 1px solid #27BEEE;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -81,30 +102,42 @@ cursor:pointer;
     -o-transition: All 250ms ease;
     -ms-transition: All 250ms ease;
     transition: All 250ms ease;
-    cursor: pointer; 
-    border-radius: 20px;
+    cursor: pointer;
+    display:block;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    
+    
 }
 
-[idkey = "1"]:active {
--webkit-box-shadow: none !important;
--moz-box-shadow: none !important;
--ms-box-shadow: none !important;
--o-box-shadow: none !important;
-box-shadow: none !important;
--webkit-transition: All 250ms ease;
--moz-transition: All 250ms ease;
--o-transition: All 250ms ease;
--ms-transition: All 250ms ease;
-transition: All 250ms ease;
-cursor:pointer;
+[idkey ="1"]:active {
+    /* position: relative; */
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
 }
 
-[idkey = "2"] {
+
+[idkey ="2"] {
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
     text-decoration: none;
     font-size: 20px;
     background: #eb8245;
     padding: 40px 40px;
-    margin: 5px 10px;
+    margin: 0 10px;
     border: 1px solid #eb8245;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -120,31 +153,40 @@ cursor:pointer;
     -o-transition: All 250ms ease;
     -ms-transition: All 250ms ease;
     transition: All 250ms ease;
-    cursor: pointer; 
-    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+    width: 350px;
+    
 }
 
-[idkey = "2"]:active {
--webkit-box-shadow: none !important;
--moz-box-shadow: none !important;
--ms-box-shadow: none !important;
--o-box-shadow: none !important;
-box-shadow: none !important;
--webkit-transition: All 250ms ease;
--moz-transition: All 250ms ease;
--o-transition: All 250ms ease;
--ms-transition: All 250ms ease;
-transition: All 250ms ease;
-cursor:pointer;
-
+[idkey ="2"]:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
 }
 
-[idkey = "3"] {
+[idkey ="3"] {
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
     text-decoration: none;
     font-size: 20px;
     background: #fa6681;
     padding: 40px 40px;
-    margin: 5px 10px;
+    margin: 0 10px;
     border: 1px solid #fa6681;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -160,24 +202,49 @@ cursor:pointer;
     -o-transition: All 250ms ease;
     -ms-transition: All 250ms ease;
     transition: All 250ms ease;
-    cursor: pointer; 
-    border-radius: 20px;
+    cursor: pointer;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+    width: 350px;
+    
 }
 
-[idkey = "3"]:active {
--webkit-box-shadow: none !important;
--moz-box-shadow: none !important;
--ms-box-shadow: none !important;
--o-box-shadow: none !important;
-box-shadow: none !important;
--webkit-transition: All 250ms ease;
--moz-transition: All 250ms ease;
--o-transition: All 250ms ease;
--ms-transition: All 250ms ease;
-transition: All 250ms ease;
-cursor:pointer;
+[idkey ="3"]:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
+}
+
+
+[idkey ="1"]:hover {
+    color: #168baf;
+    transition: 0.5s;
+
 }
 
 
 
+[idkey ="2"]:hover {
+    color: #94491e;
+    transition: 0.5s;
 
+}
+
+
+[idkey ="3"]:hover {
+    color: #af263f;
+    transition: 0.5s;
+
+}
