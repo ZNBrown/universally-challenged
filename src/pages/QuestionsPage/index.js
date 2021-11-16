@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux"; // New imports to work with Redux
 import "./style.css";
 import { scrubStr, shuffle, resetState, submitAnswer } from "../../actions";
@@ -6,6 +6,7 @@ import { useHistory } from "react-router";
 import axios from "axios";
 import Countdown from "react-countdown";
 import { Timer } from "../../components";
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
 const QuestionsPage = () => {
   const [key, setKey] = useState(0);
@@ -53,6 +54,47 @@ const QuestionsPage = () => {
     dispatch(submitAnswer(test));
   };
 
+  const renderTime = ({ remainingTime }) => {
+    const currentTime = useRef(remainingTime);
+    const prevTime = useRef(null);
+    const isNewTimeFirstTick = useRef(false);
+    const [, setOneLastRerender] = useState(0);
+    const dispatch = useDispatch();
+
+    if (currentTime.current !== remainingTime) {
+      isNewTimeFirstTick.current = true;
+      prevTime.current = currentTime.current;
+      currentTime.current = remainingTime;
+    } else {
+      isNewTimeFirstTick.current = false;
+    }
+
+    // force one last re-render when the time is over to tirgger the last animation
+    if (remainingTime === 0) {
+      setTimeout(() => {
+        setOneLastRerender((val) => val + 1);
+      }, 20);
+    }
+
+    const isTimeUp = isNewTimeFirstTick.current;
+
+    return (
+      <div className="time-wrapper">
+        <div key={remainingTime} className={`time ${isTimeUp ? "up" : ""}`}>
+          {remainingTime}
+        </div>
+        {prevTime.current !== null && (
+          <div
+            key={prevTime.current}
+            className={`time ${!isTimeUp ? "down" : ""}`}
+          >
+            {prevTime.current}
+          </div>
+        )}
+      </div>
+    );
+  };
+
   if (currentQuestionIndex <= 9) {
     const answers = shuffle([
       ...results[currentQuestionIndex].incorrectAnswers,
@@ -60,37 +102,52 @@ const QuestionsPage = () => {
     ]);
 
     return (
-
-      <div role='questionPage'>
+      <div role="questionPage">
         <Countdown date={Date.now() + 1000} key={countdownKey}>
-
           <div>
             <div>
-              <p className="questionNumber">Question {currentQuestionIndex + 1} </p>
+              <p className="questionNumber">
+                Question {currentQuestionIndex + 1}{" "}
+              </p>
               <h3> Score: {currentScore} </h3>
             </div>
 
-            <div>
-
+            <div className="timer-wrapper">
               <h1>
-                <Timer />
+                <CountdownCircleTimer
+                  onComplete={() => {
+                    setCountdownKey((prevCountdownKey) => prevCountdownKey + 1);
+                    dispatch(submitAnswer(""));
+                    return [true, 100];
+                  }}
+                  key={key}
+                  isPlaying
+                  duration={60}
+                  colors={[
+                    ["#64DFDF", 0.25],
+                    ["#48BFE3", 0.25],
+                    ["#5E60CE", 0.25],
+                    ["#6930C3", 0.25],
+                  ]}
+                >
+                  {/* {({ remainingTime }) => remainingTime} */}
+                  {renderTime}
+                </CountdownCircleTimer>
               </h1>
             </div>
 
             <br></br>
             <div>
-
               <p className="questionTitle">
                 {" "}
                 {scrubStr(results[currentQuestionIndex].question)}{" "}
               </p>
               <div className="answersGrid">
-              
                 {answers.map((t, i) => (
                   <button
-                    role='button'
-                    name='answerButton'
-                    className='answersButton'
+                    role="button"
+                    name="answerButton"
+                    className="answersButton"
                     idkey={i}
                     onClick={sendAnswer}
                     value={t}
@@ -98,7 +155,6 @@ const QuestionsPage = () => {
                     {t}
                   </button>
                 ))}
-          
               </div>
             </div>
           </div>

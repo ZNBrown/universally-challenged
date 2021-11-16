@@ -49,7 +49,7 @@ const config = {
         test: /\.(png|svg|jpg|gif|pdf)$/,
         use: ["file-loader"],
       }, // transpile image files
-      // transpile css files
+
       // {
       //   test: /\.s[ac]ss$/i,
       //   use: [
