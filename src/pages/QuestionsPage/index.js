@@ -60,37 +60,40 @@ const QuestionsPage = () => {
     ]);
 
     return (
-
-      <div role='questionPage'>
+      <div role="questionPage">
         <Countdown date={Date.now() + 1000} key={countdownKey}>
-
           <div>
             <div>
-              <p className="questionNumber">Question {currentQuestionIndex + 1} </p>
+              <p className="questionNumber">
+                Question {currentQuestionIndex + 1}{" "}
+              </p>
               <h3> Score: {currentScore} </h3>
             </div>
 
             <div>
-
               <h1>
-                <Timer />
+                <Timer
+                  onComplete={() => {
+                    setCountdownKey((prevCountdownKey) => prevCountdownKey + 1);
+                    dispatch(submitAnswer(""));
+                    return [true, 100];
+                  }}
+                ></Timer>
               </h1>
             </div>
 
             <br></br>
             <div>
-
               <p className="questionTitle">
                 {" "}
                 {scrubStr(results[currentQuestionIndex].question)}{" "}
               </p>
               <div className="answersGrid">
-              
                 {answers.map((t, i) => (
                   <button
-                    role='button'
-                    name='answerButton'
-                    className='answersButton'
+                    role="button"
+                    name="answerButton"
+                    className="answersButton"
                     idkey={i}
                     onClick={sendAnswer}
                     value={t}
@@ -98,7 +101,6 @@ const QuestionsPage = () => {
                     {t}
                   </button>
                 ))}
-          
               </div>
             </div>
           </div>
