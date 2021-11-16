@@ -64,10 +64,10 @@ const QuestionsPage = () => {
     return (
       <div
         role='questionPage'>
-        <Countdown date={Date.now() + 5000} key={countdownKey}>
+        <Countdown date={Date.now() + 1000} key={countdownKey}>
           <div>
             <div>
-              <p>Question {currentQuestionIndex + 1} </p>
+              <p className="questionNumber">Question {currentQuestionIndex + 1} </p>
               <h3> Score: {currentScore} </h3>
             </div>
 
@@ -81,7 +81,7 @@ const QuestionsPage = () => {
                   }}
                   key={key}
                   isPlaying
-                  duration={15}
+                  duration={60}
                   colors={[
                     ["#64DFDF", 0.25],
                     ["#48BFE3", 0.25],
@@ -96,22 +96,25 @@ const QuestionsPage = () => {
 
             <br></br>
             <div>
-              <p>
+              <p className="questionTitle">
                 {" "}
                 {scrubStr(results[currentQuestionIndex].question)}{" "}
               </p>
-              <div>
+              <div className="answersGrid">
+              
                 {answers.map((t, i) => (
                   <button
                     role='button'
                     name='answerButton'
-                    id={i}
+                    className='answersButton'
+                    idkey={i}
                     onClick={sendAnswer}
                     value={t}
                   >
                     {t}
                   </button>
                 ))}
+          
               </div>
             </div>
           </div>

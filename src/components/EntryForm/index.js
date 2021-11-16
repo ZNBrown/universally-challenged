@@ -72,8 +72,8 @@ const EntryForm = () => {
             <option value='DEFAULT' disabled>
               Pick a Category...{" "}
             </option>
-            <option value='any'>Random Category</option>
             <option value='9'>General Knowledge</option>
+            <option value='31'>Japanese Anime and Manga</option>
             <option value='22'>Geography</option>
             <option value='17'>Science and Nature</option>
             <option value='11'>Film</option>
