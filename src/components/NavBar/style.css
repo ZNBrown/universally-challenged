@@ -5,6 +5,7 @@ Navbar
 */
 #show {
   display: unset;
+  z-index: index 50;
 }
 
 #hide {
@@ -14,6 +15,12 @@ Navbar
 #btn-container {
   display: flex;
   justify-content: space-between;
+}
+
+#nav-btn-burger, #nav-btn-cross {
+  font-size: 45px;
+  color: black;
+  cursor: pointer;
 }
 
 links-container {
