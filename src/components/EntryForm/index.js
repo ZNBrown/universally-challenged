@@ -43,7 +43,7 @@ const EntryForm = () => {
       {reset()}
       <div>
         <div>
-          <h1 className="titleHeading">Quiz Name Here</h1>
+          <h1 className="titleHeading">Universally Challenged</h1>
         </div>
         <h2 className="titleIntro"> Let's start a quiz! </h2>
         <form aria-label='userForm' role='form' onSubmit={handleSubmit}>

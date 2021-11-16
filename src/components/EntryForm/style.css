@@ -8,9 +8,18 @@
 
 }
 
+input[type=text]{
+    background-color: red;
+    border-radius: 5px;
+}
+select {
+    color:red;
+    border-radius: 5px;
+}
+
 .username {
     font-family: 'Kanit', sans-serif;
-    color: red;
+    color: #46DF55;
     display:flex;
     justify-content: center;
     margin-top: 20px;
@@ -18,7 +27,7 @@
 }
 
 .category {
-    color: green;
+    color: #27BEEE;
     font-family: 'Kanit', sans-serif;
     display:flex;
     justify-content: center;
@@ -27,7 +36,7 @@
 }
 
 .difficulty {
-    color:blue;
+    color:#eb8245;
     font-family: 'Kanit', sans-serif;
     display:flex;
     justify-content: center;
