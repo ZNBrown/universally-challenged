@@ -19,7 +19,7 @@ const QuestionsPage = () => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const submitData = () => {
+  const submitData = async () => {
     console.log("Submit Data is calling");
 
     const req = {
@@ -28,12 +28,11 @@ const QuestionsPage = () => {
       // difficulty: difficulty,
     };
 
-    axios
-      .post("https://universally-challenged-server.herokuapp.com/scores/", req)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch(console.warn);
+    const response = await axios.post(
+      "https://universally-challenged-server.herokuapp.com/scores/",
+      req
+    );
+    console.log(response);
   };
 
   function goHome() {
@@ -53,6 +52,12 @@ const QuestionsPage = () => {
     setCountdownKey((prevCountdownKey) => prevCountdownKey + 1);
     dispatch(submitAnswer(test));
   };
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }
 
   const renderTime = ({ remainingTime }) => {
     const currentTime = useRef(remainingTime);
@@ -97,6 +102,7 @@ const QuestionsPage = () => {
   };
 
   if (currentQuestionIndex <= 9) {
+    console.log("first-", currentQuestionIndex);
     const answers = shuffle([
       ...results[currentQuestionIndex].incorrectAnswers,
       results[currentQuestionIndex].correctAnswer,
@@ -164,10 +170,10 @@ const QuestionsPage = () => {
       </div>
     );
   } else {
-    console.log(currentQuestionIndex);
+    console.log("second-", currentQuestionIndex);
+    // submitData();
     return (
       <>
-        {submitData()}
         <div>
           <h1> The quiz is finished! </h1>
           <br></br>
@@ -184,8 +190,19 @@ const QuestionsPage = () => {
           </button>
           <br></br>
           <h3>Top Scores</h3>
-          <LeaderboardTable />
-         
+
+          <LeaderboardTable
+            currentUser={{
+              username: username,
+              score: currentScore,
+              className: "active",
+              id: getRandomInt(100, 1000),
+            }}
+          />
+          <button className="inputButton" onClick={goHome}>
+            Home
+          </button>
+
         </div>
       </>
     );
