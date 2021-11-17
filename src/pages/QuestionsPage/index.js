@@ -179,7 +179,7 @@ const QuestionsPage = () => {
               1.3 for "medium" quiz
             </i>
           </h5>
-          <button className="inputButton2" onClick={goHome}>
+           <button className="inputButton2" onClick={goHome}>
             Home
           </button>
           <br></br>
