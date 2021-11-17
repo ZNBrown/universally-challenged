@@ -9,21 +9,13 @@ export function Home() {
       <h1 id="title">Kahtwoot!</h1>
 
       <div id="cards">
-        <a href="/UserPage">
-          <HomepageSelector id="game-card" title="New Game" />
-        </a>
+          <HomepageSelector href="/UserPage" id="game-card" title="New Game" />
 
-        <a href="/leaderboard">
-          <HomepageSelector id="scores-card" title="Highscores" />
-        </a>
+          <HomepageSelector href="/leaderboard" id="scores-card" title="Highscores" />
 
-        <a href="/about">
-          <HomepageSelector id="about-card" title="About" />
-        </a>
+          <HomepageSelector href="/about" id="about-card" title="About" />
 
-        <a href="/???">
-          <HomepageSelector id="questionmark-card" title="???" />
-        </a>
+          <HomepageSelector href="/???" id="questionmark-card" title="???" />
       </div>
     </>
   );
