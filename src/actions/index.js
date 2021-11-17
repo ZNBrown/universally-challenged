@@ -36,10 +36,10 @@ export const addUsername = (username) => ({
   payload: username,
 });
 
-// export const addUserNum = (userNum) => ({
-//   type: "ADD_USER_NUM",
-//   payload: userNum,
-// });
+export const addUserNum = (userNum) => ({
+  type: "ADD_USER_NUM",
+  payload: userNum,
+});
 
 export const updateDifficulty = (difficulty) => ({
   type: "ADD_DIFFICULTY",

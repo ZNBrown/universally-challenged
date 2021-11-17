@@ -5,6 +5,7 @@ import {
   ANSWER_SUBMIT,
   RESET,
   SET_ERROR,
+  ADD_USER_NUM
 } from "./types";
 
 export const loadQuiz = (category, difficulty) => {
@@ -45,10 +46,10 @@ export const addUsername = (username) => ({
   payload: username,
 });
 
-// export const addUserNum = (userNum) => ({
-//   type: "ADD_USER_NUM",
-//   payload: userNum,
-// });
+export const addUserNum = (userNum) => ({
+  type: "ADD_USER_NUM",
+  payload: userNum,
+});
 
 export const updateDifficulty = (difficulty) => ({
   type: "ADD_DIFFICULTY",
