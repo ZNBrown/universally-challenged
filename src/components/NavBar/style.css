@@ -18,7 +18,7 @@ Navbar
 
 #nav-btn-burger, #nav-btn-cross {
   font-size: 45px;
-  color: #5D3FD3;
+  color: white;
   cursor: pointer;
   z-index: 600;
   position: fixed;
@@ -38,7 +38,9 @@ Navbar
 
 
 .links-container {
-  background: #5D3FD3;
+  /* background: #5D3FD3; */
+  background-color: rgb(233, 231, 208);
+  color: #5D3FD3;
   position: fixed;
   bottom: 0;
   height: 100vh;
@@ -52,7 +54,7 @@ Navbar
 }
 
 .links {
-  color: white;
+  color: #5D3FD3;
   font-size: 40px;
 }
 

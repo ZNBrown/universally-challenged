@@ -11,7 +11,7 @@ export const Timer = ({ setCountdownKey }) => {
     const prevTime = useRef(null);
     const isNewTimeFirstTick = useRef(false);
     const [, setOneLastRerender] = useState(0);
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     if (currentTime.current !== remainingTime) {
       isNewTimeFirstTick.current = true;
@@ -31,7 +31,7 @@ export const Timer = ({ setCountdownKey }) => {
     const isTimeUp = isNewTimeFirstTick.current;
 
     return (
-      <div className="time-wrapper">
+      <div aria-label='timer' className="time-wrapper">
         <div key={remainingTime} className={`time ${isTimeUp ? "up" : ""}`}>
           {remainingTime}
         </div>

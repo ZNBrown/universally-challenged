@@ -5,7 +5,7 @@ import { scrubStr, shuffle, resetState, submitAnswer } from "../../actions";
 import { useHistory } from "react-router";
 import axios from "axios";
 import Countdown from "react-countdown";
-import { Timer } from "../../components";
+import { Timer, LeaderboardTable } from "../../components";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
 const QuestionsPage = () => {
@@ -26,21 +26,20 @@ const QuestionsPage = () => {
   //have currentUser, a number (used to index the users list)
   //describes which user is going now
 
-  const submitData = () => {
+  const submitData = async () => {
     console.log("Submit Data is calling");
 
     const req = {
-      name: username,
+      username: username,
       score: currentScore,
-      difficulty: difficulty,
+      // difficulty: difficulty,
     };
 
-    axios
-      .post("/api/*", req)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch(console.warn);
+    const response = await axios.post(
+      "https://universally-challenged-server.herokuapp.com/scores/",
+      req
+    );
+    console.log(response);
   };
 
   function goHome() {
@@ -60,6 +59,12 @@ const QuestionsPage = () => {
     setCountdownKey((prevCountdownKey) => prevCountdownKey + 1);
     dispatch(submitAnswer(test));
   };
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }
 
   const renderTime = ({ remainingTime }) => {
     const currentTime = useRef(remainingTime);
@@ -87,6 +92,7 @@ const QuestionsPage = () => {
 
     return (
       <div className="time-wrapper">
+        
         <div key={remainingTime} className={`time ${isTimeUp ? "up" : ""}`}>
           {remainingTime}
         </div>
@@ -101,6 +107,7 @@ const QuestionsPage = () => {
       </div>
     );
   };
+
 
   if (currentQuestionIndex <=  9) {
     const answers = shuffle([
@@ -170,10 +177,10 @@ const QuestionsPage = () => {
       </div>
     );
   } else {
-    console.log(currentQuestionIndex);
+    console.log("second-", currentQuestionIndex);
+    // submitData();
     return (
       <>
-        {submitData()}
         <div>
           <h1> The quiz is finished! </h1>
           <br></br>
@@ -185,14 +192,24 @@ const QuestionsPage = () => {
               1.3 for "medium" quiz
             </i>
           </h5>
+           <button className="inputButton2" onClick={goHome}>
+            Home
+          </button>
           <br></br>
+          <h3>Top Scores</h3>
 
+          <LeaderboardTable
+            currentUser={{
+              username: username,
+              score: currentScore,
+              className: "active",
+              id: getRandomInt(100, 1000),
+            }}
+          />
           <button className="inputButton" onClick={goHome}>
             Home
           </button>
-          <button className="inputButton" onClick={goLeaderboard}>
-            Leaderboard
-          </button>
+
         </div>
       </>
     );
