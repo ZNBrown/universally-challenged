@@ -80,6 +80,7 @@ const QuestionsPage = () => {
 
     return (
       <div className="time-wrapper">
+        
         <div key={remainingTime} className={`time ${isTimeUp ? "up" : ""}`}>
           {remainingTime}
         </div>
@@ -103,6 +104,7 @@ const QuestionsPage = () => {
 
     return (
       <div role="questionPage">
+        <div className="backgroundWrapper"></div>
         <Countdown date={Date.now() + 1000} key={countdownKey}>
           <div>
             <div>
