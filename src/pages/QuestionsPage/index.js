@@ -12,7 +12,7 @@ const QuestionsPage = () => {
   const [key, setKey] = useState(0);
   const [countdownKey, setCountdownKey] = useState(0);
   const [currentUser, SetCurrentUser] = useState(0);
-  const [userList, SetUserList] = useState([]);
+  const userList = useSelector((state) => state.userList);
   const userNum = useSelector((state) => state.userNum);
   const username = useSelector((state) => state.username);
   const difficulty = useSelector((state) => state.difficulty);
@@ -102,7 +102,7 @@ const QuestionsPage = () => {
     );
   };
 
-  if (currentQuestionIndex <= (userNum * 10) - 1) {
+  if (currentQuestionIndex <=  9) {
     const answers = shuffle([
       ...results[currentQuestionIndex].incorrectAnswers,
       results[currentQuestionIndex].correctAnswer,

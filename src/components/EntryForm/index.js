@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { loadQuiz, addUsername, updateDifficulty, resetState, addUserNum } from "../../actions";
+import { loadQuiz, addUsername, updateDifficulty, resetState, addUserNum, addUserList } from "../../actions";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./style.css";
 
 const EntryForm = () => {
   const [username, setUsername] = useState("");
+  const [userList, setUserList] = useState([]);
   const [userNum, setUserNum] = useState("");
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
@@ -18,6 +19,7 @@ const EntryForm = () => {
     dispatch(addUsername(username));
     dispatch(addUserNum(userNum))
     dispatch(updateDifficulty(difficulty));
+    dispatch(addUserList(userList))
     history.push("/QuestionsPage");
   };
 
@@ -33,6 +35,16 @@ const EntryForm = () => {
   const updateUserNum = (e) => {
     const input = e.target.value;
     setUserNum(input);
+    let names = [];
+    for (let i = 1; i <= input; i++)
+    {
+      const playerName = `Player ${i}`
+      names.push(playerName)
+    }
+    console.log("names next")
+    console.log(names)
+    setUserList(names)
+  
   };
 
   const updateCategory = (e) => {
@@ -44,6 +56,8 @@ const EntryForm = () => {
     const input = e.target.value;
     setDifficulty(input);
   };
+
+
 
   return (
     <>
