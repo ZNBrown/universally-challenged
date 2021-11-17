@@ -37,21 +37,20 @@ const NavBar = () => {
         </div>
       </div>
 
-      <nav ref={navBar} id="hide" className="links-container" role="navigation">
-        <NavLink onClick={closeNav} className="links" to="/">
+      <nav ref={navBar} id='hide' className="links-container" role="navigation">
+        <NavLink aria-label='homepage link' onClick={closeNav} className="links" to="/">
           Home
         </NavLink>
 
-        <NavLink onClick={closeNav} className="links" to="/UserPage">
+        <NavLink aria-label='new quiz link' onClick={closeNav} className="links" to="/UserPage">
           New Game
         </NavLink>
-
-        <NavLink onClick={closeNav} className="links" to="/leaderboard">
+        
+        <NavLink aria-label='highscores link' onClick={closeNav} className="links" to="/scores">
           Highscores
         </NavLink>
 
-
-        <NavLink onClick={closeNav} className="links" to="/about">
+        <NavLink aria-label='about link' onClick={closeNav} className="links" to="/about">
           About
         </NavLink>
       </nav>
