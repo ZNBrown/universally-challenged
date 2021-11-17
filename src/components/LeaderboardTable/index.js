@@ -4,7 +4,7 @@ import axios from "axios";
 
 const url = "https://universally-challenged-server.herokuapp.com/";
 
-export const LeaderboardTable = (prop) => {
+export const LeaderboardTable = () => {
   const [topTen, setTopTen] = useState([]);
   const [scores, setScores] = useState([]);
   // const dispatch = useDispatch();
@@ -25,38 +25,11 @@ export const LeaderboardTable = (prop) => {
     getAllScores();
   }, []);
 
-  if (prop.userData === null) {
-    return (
-      <div>
-        {topTen.map((score, index) => {
-          return (
-            <LeaderboardItem key={score.id} {...score} index={index + 1} />
-          );
-        })}
-      </div>
-    );
-  } else if (prop.index <= 10) {
-    return (
-      <div>
-        {topTen.map((score, index) => {
-          return (
-            <LeaderboardItem key={score.id} {...score} index={index + 1} />
-          );
-        })}
-      </div>
-    );
-  } else if (prop.index > 10) {
+  return (
     <div>
       {topTen.map((score, index) => {
-        return (
-          <div>
-            <LeaderboardItem key={score.id} {...score} index={index + 1} />
-            <p>
-              {prop.username}: {prop.score}
-            </p>
-          </div>
-        );
+        return <LeaderboardItem key={score.id} {...score} index={index + 1} />;
       })}
-    </div>;
-  }
+    </div>
+  );
 };

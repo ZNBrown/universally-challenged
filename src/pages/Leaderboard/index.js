@@ -6,7 +6,7 @@ export function Leaderboard() {
   return (
     <div>
       <h1>Top 10</h1>
-      <LeaderboardTable userData={null} />
+      <LeaderboardTable />
     </div>
   );
 }
