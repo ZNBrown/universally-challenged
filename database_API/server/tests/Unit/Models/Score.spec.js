@@ -22,7 +22,7 @@ describe('Score', () => {
 
     describe('findById', () => {
         test('it resolves with scores on successful db query', async () => {
-            let scoreData = { username: "test guy", score: '3' }
+            let scoreData = { username: "test guy", score: 3 }
             jest.spyOn(db, 'query')
                 .mockResolvedValueOnce({rows: [ scoreData] });
             const result = await Score.findById(1);
@@ -32,7 +32,7 @@ describe('Score', () => {
 
     describe('create', () => {
         test('it resolves with dog on successful db query', async () => {
-            let scoreData = { username: "test guy", score: '3' }
+            let scoreData = { username: "test guy", score: 3 }
             jest.spyOn(db, 'query')
                 .mockResolvedValueOnce({rows: [ { ...scoreData, id: 1 }] });
             const result = await Score.create(scoreData);

@@ -25,7 +25,7 @@ describe('Scores controller', () => {
     describe('show', () => {
         test('it returns a Score with a 200 status code', async () => {
             let testScore = {
-                id: 1, name: 'Test Score', age: 2
+                id: 1, name: 'Test Score'
             }
             jest.spyOn(Score, 'findById')
                 .mockResolvedValue(new Score(testScore));
@@ -40,7 +40,7 @@ describe('Scores controller', () => {
     describe('create', () => {
         test('it returns a new Score with a 201 status code', async () => {
             let testScore = {
-                id: 1, name: 'Test Score', age: 2
+                id: 1, name: 'Test Score'
             }
             jest.spyOn(Score, 'create')
                 .mockResolvedValue(new Score(testScore));
