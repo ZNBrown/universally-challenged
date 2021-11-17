@@ -1,6 +1,8 @@
 body {
     background-color: rgb(233, 231, 208);
     font-family: 'Kanit', sans-serif;
+    background-image: url("/public/background.jpeg");
+
 }
 
 #title {
