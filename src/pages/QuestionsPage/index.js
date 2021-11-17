@@ -11,6 +11,8 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 const QuestionsPage = () => {
   const [key, setKey] = useState(0);
   const [countdownKey, setCountdownKey] = useState(0);
+  const [currentUser, SetCurrentUser] = useState(0);
+  const [userList, SetUserList] = useState([]);
   const userNum = useSelector((state) => state.userNum);
   const username = useSelector((state) => state.username);
   const difficulty = useSelector((state) => state.difficulty);
@@ -19,6 +21,10 @@ const QuestionsPage = () => {
   let results = useSelector((state) => state.result);
   const history = useHistory();
   const dispatch = useDispatch();
+  //idea: have users list in the state
+  //records score for each
+  //have currentUser, a number (used to index the users list)
+  //describes which user is going now
 
   const submitData = () => {
     console.log("Submit Data is calling");
