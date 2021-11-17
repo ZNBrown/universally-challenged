@@ -1,2 +1,5 @@
-export const ACTION1 = "ACTION1";
-export const ACTION2 = "ACTION2";
+export const ADD_USERNAME = "ADD_USERNAME";
+export const ADD_DIFFICULTY = "ADD_DIFFICULTY";
+export const ANSWER_SUBMIT = "ANSWER_SUBMIT";
+export const RESET = "RESET";
+export const SET_ERROR = "SET_ERROR";

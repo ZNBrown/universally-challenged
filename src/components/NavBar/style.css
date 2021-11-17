@@ -1,0 +1,65 @@
+/*
+=============== 
+Navbar
+===============
+*/
+#show {
+  transform: translateY(0);
+}
+
+#hide {
+  transform: translateY(-100%);  
+}
+
+#btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav-btn-burger, #nav-btn-cross {
+  font-size: 45px;
+  color: white;
+  cursor: pointer;
+  z-index: 600;
+  position: fixed;
+  right: 5vw;
+}
+
+#nav-btn-cross {
+  font-size: 80px;
+  color: red;
+  top: -25px;
+  opacity: 0.5;
+}
+
+#nav-btn-cross:active {
+  opacity: 1;
+}
+
+
+.links-container {
+  /* background: #5D3FD3; */
+  background-color: rgb(233, 231, 208);
+  color: #5D3FD3;
+  position: fixed;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  transition: 0.5s;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.links {
+  color: #5D3FD3;
+  font-size: 40px;
+}
+
+.links:active {
+  color: blue;
+}
+@media screen and (min-width: 800px) {
+}

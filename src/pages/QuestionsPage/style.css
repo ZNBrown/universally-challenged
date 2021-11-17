@@ -1,0 +1,332 @@
+* {
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Kanit', sans-serif;
+}
+
+.answersGrid {
+    margin: 20px auto;
+    width:500px;
+    height: 280px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: auto auto;
+    justify-content: space-around
+    
+}
+
+.questionNumber{
+    font-size:25px;
+    margin: 0;
+}
+
+.questionTitle{
+    font-size: 25px;
+    margin: 0;
+}
+
+
+[idkey ="0"]:hover {
+   
+    color: #289633;
+    transition: 0.5s;
+}
+
+
+[idkey ="1"]:hover {
+    color: #168baf;
+    transition: 0.5s;
+
+}
+
+
+
+[idkey ="2"]:hover {
+    color: #94491e;
+    transition: 0.5s;
+
+}
+
+
+[idkey ="3"]:hover {
+    color: #af263f;
+    transition: 0.5s;
+
+}
+
+[idkey ="0"]{
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    background: #46DF55;
+    padding: 40px 40px;
+    margin: 0 10px;
+    border: 1px solid #46DF55;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 0px #289633;
+    -moz-box-shadow: 0px 5px 0px #289633;
+    -ms-box-shadow: 0px 5px 0px #289633;
+    -o-box-shadow: 0px 5px 0px #289633;
+    box-shadow: 0px 5px 0px #289633;
+    color: white;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    /* margin-left: auto;
+    margin-right: auto; */
+    width: 350px;
+    height:120px;
+    
+}
+
+[idkey ="0"]:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
+}
+
+
+[idkey ="1"] {
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    background: #27BEEE;
+    padding: 40px 40px;
+    margin: 0 10px;
+    border: 1px solid #27BEEE;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 0px #168baf;
+    -moz-box-shadow: 0px 5px 0px #168baf;
+    -ms-box-shadow: 0px 5px 0px #168baf;
+    -o-box-shadow: 0px 5px 0px #168baf;
+    box-shadow: 0px 5px 0px #168baf;
+    color: white;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor: pointer;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height:120px;
+    
+    
+}
+
+[idkey ="1"]:active {
+    /* position: relative; */
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
+}
+
+
+[idkey ="2"] {
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    background: #eb8245;
+    padding: 40px 40px;
+    margin: 0 10px;
+    border: 1px solid #eb8245;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 0px #94491e;
+    -moz-box-shadow: 0px 5px 0px #94491e;
+    -ms-box-shadow: 0px 5px 0px #94491e;
+    -o-box-shadow: 0px 5px 0px #94491e;
+    box-shadow: 0px 5px 0px #94491e;
+    color: white;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    margin-bottom:20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height:120px;
+    
+}
+
+[idkey ="2"]:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
+}
+
+[idkey ="3"] {
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    background: #fa6681;
+    padding: 40px 40px;
+    margin: 0 10px;
+    border: 1px solid #fa6681;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 0px #af263f;
+    -moz-box-shadow: 0px 5px 0px #af263f;
+    -ms-box-shadow: 0px 5px 0px #af263f;
+    -o-box-shadow: 0px 5px 0px #af263f;
+    box-shadow: 0px 5px 0px #af263f;
+    color: white;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor: pointer;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom:20px;
+    width: 350px;
+    height:120px;
+    
+}
+
+[idkey ="3"]:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
+}
+.inputButton2 {
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    background: #fa6681;
+    padding: 5px 40px;
+    margin: 0 10px;
+    border: 1px solid #fa6681;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 0px #af263f;
+    -moz-box-shadow: 0px 5px 0px #af263f;
+    -ms-box-shadow: 0px 5px 0px #af263f;
+    -o-box-shadow: 0px 5px 0px #af263f;
+    box-shadow: 0px 5px 0px #af263f;
+    color: white;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor: pointer;
+    display:block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+  
+  }
+  /*==========  Active State  ==========*/
+  .inputButton2:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
+  }
+
+@media only screen and (max-width: 600px) {
+    [idkey ="0"],[idkey ="1"], [idkey ="2"], [idkey ="3"]{
+    width: 230px;
+    height:150px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .answersGrid {
+    width:380px;
+    height: 300px;
+    margin-bottom:30px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .questionTitle {
+        font-size:18px;
+    }
+}
