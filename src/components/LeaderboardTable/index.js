@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { LeaderboardItem } from "../index.js";
 import axios from "axios";
 
-const url = "http://universally-challenged-server.herokuapp.com/";
+const url = "https://universally-challenged-server.herokuapp.com/";
 
 export const LeaderboardTable = (prop) => {
   const [topTen, setTopTen] = useState([]);
