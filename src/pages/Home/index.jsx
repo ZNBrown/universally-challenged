@@ -6,7 +6,6 @@ import { HomepageSelector } from "../../components";
 export function Home() {
   return (
     <>
-    <div className="backgroundWrapper"></div>
       <h1 id="title">Kahtwoot!</h1>
 
       <div id="cards">

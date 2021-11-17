@@ -42,8 +42,6 @@ const EntryForm = () => {
     <>
       {reset()}
       <div>
-        <div className="backgroundWrapper"></div>
-       
         <div>
           <h1 className="titleHeading">Kahtwoot!</h1>
         </div>
