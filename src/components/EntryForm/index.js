@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { loadQuiz, addUsername, updateDifficulty, resetState } from "../../actions";
+import { loadQuiz, addUsername, updateDifficulty, resetState, addUserNum, addUserList } from "../../actions";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./style.css";
 
 const EntryForm = () => {
   const [username, setUsername] = useState("");
+  const [userList, setUserList] = useState([]);
+  const [userNum, setUserNum] = useState("");
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const dispatch = useDispatch();
@@ -15,7 +17,9 @@ const EntryForm = () => {
     e.preventDefault();
     dispatch(loadQuiz(category, difficulty));
     dispatch(addUsername(username));
+    dispatch(addUserNum(userNum))
     dispatch(updateDifficulty(difficulty));
+    dispatch(addUserList(userList))
     history.push("/QuestionsPage");
   };
 
@@ -28,6 +32,21 @@ const EntryForm = () => {
     setUsername(input);
   };
 
+  const updateUserNum = (e) => {
+    const input = e.target.value;
+    setUserNum(input);
+    let names = [];
+    for (let i = 1; i <= input; i++)
+    {
+      const playerName = `Player ${i}`
+      names.push(playerName)
+    }
+    console.log("names next")
+    console.log(names)
+    setUserList(names)
+  
+  };
+
   const updateCategory = (e) => {
     const input = e.target.value;
     setCategory(input);
@@ -38,6 +57,8 @@ const EntryForm = () => {
     setDifficulty(input);
   };
 
+
+
   return (
     <>
       {reset()}
@@ -47,6 +68,19 @@ const EntryForm = () => {
         </div>
         <h2 className="titleIntro"> Let's start a quiz! </h2>
         <form aria-label='userForm' role='form' onSubmit={handleSubmit}>
+        <label className="userNum" placeholder='How many players' htmlFor='userNum'>
+            Players:
+          </label>
+          <input
+            id='userNum'
+            type='number'
+            min="1" 
+            max="4"
+            placeholder='1'
+            value={userNum}
+            onChange={updateUserNum}
+            required
+          />
           <label className="username" placeholder='Enter Username' htmlFor='username'>
             Username:
           </label>

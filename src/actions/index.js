@@ -30,16 +30,20 @@ export const loadQuiz = (category, difficulty) => {
     }
   };
 };
+export const addUserList = (userList) => ({
+  type: "ADD_USER_LIST",
+  payload: userList,
+});
 
 export const addUsername = (username) => ({
   type: "ADD_USERNAME",
   payload: username,
 });
 
-// export const addUserNum = (userNum) => ({
-//   type: "ADD_USER_NUM",
-//   payload: userNum,
-// });
+export const addUserNum = (userNum) => ({
+  type: "ADD_USER_NUM",
+  payload: userNum,
+});
 
 export const updateDifficulty = (difficulty) => ({
   type: "ADD_DIFFICULTY",
