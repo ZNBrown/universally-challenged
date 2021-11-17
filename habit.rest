@@ -1,0 +1,18 @@
+GET http://universally-challenged-server.herokuapp.com/scores/
+
+###
+
+
+POST http://universally-challenged-server.herokuapp.com/scores HTTP/1.1
+content-type: application/json
+
+{
+    "username": "leia",
+    "score": "31"
+}
+
+# ###
+# PATCH http://localhost:3000/habits/habit/6179661088b14326c8d2e81e/up
+
+# ###
+# DELETE http://localhost:3000/habits/habit/61794faf8341dad641bf9d8d 

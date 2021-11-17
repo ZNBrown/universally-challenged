@@ -1,10 +1,10 @@
 import React from "react";
 
-export const LeaderboardItem = ({ username, scoreTotal }) => {
+export const LeaderboardItem = ({ username, score }) => {
   return (
     <div>
       <h1 className="username">{username}</h1>
-      <p>{scoreTotal}</p>
+      <p>{score}</p>
     </div>
   );
 };
