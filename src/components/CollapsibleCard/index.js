@@ -8,7 +8,7 @@ const CollapsibleCard = ({children, label}) => {
     
     return (
         <div className='container'>
-            <button className='toggle' onClick={() => setOpen(!open)}>{label}</button>
+            <button className='toggle' onClick={() => setOpen(!open)}><h2>{label}</h2></button>
             
             <div className={open ? 'content show' : 'content'}>{children}</div>
         </div>
