@@ -4,3 +4,5 @@ export { NavBar } from "./NavBar";
 export { EntryForm } from "./EntryForm";
 export { Timer } from "./Timer";
 export { Timer321 } from "./Timer-321";
+export { LeaderboardItem } from "./LeaderboardItem";
+export { LeaderboardTable } from "./LeaderboardTable";

@@ -157,7 +157,6 @@ const QuestionsPage = () => {
                   </button>
                 ))}
               </div>
-             
             </div>
           </div>
         </Countdown>
