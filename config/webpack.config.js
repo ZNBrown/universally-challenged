@@ -32,22 +32,36 @@ const config = {
     // helpers we want webpack to use
     rules: [
       // specific instructions for each helper
-      { 
+      {
         test: /\.(js|jsx)$/,
         resolve: {
-          extensions: [".js", ".jsx"]
-        }, 
-        exclude: /node_modules/, 
-        loader: 'babel-loader' 
-      }, // transpile JavaScript files
+          extensions: [".js", ".jsx"],
+        },
+        exclude: /nodeModules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       }, // transpile css files
       {
         test: /\.(png|svg|jpg|gif|pdf)$/,
-        use: ['file-loader'],
+        use: ["file-loader"],
       }, // transpile image files
+
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
     ],
   },
 };
