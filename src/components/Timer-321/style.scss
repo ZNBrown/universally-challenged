@@ -28,7 +28,7 @@
       grid-row-start: #{$y};
       grid-row-end: #{$y + 1};
       background: #1b2335;
-      transition: all 0.3s ease #{($x + $y) * 0.05}s;
+      transition: all 0.25s ease #{($x + $y) * 0.05}s;
       will-change: transform;
     }
   }

@@ -8,9 +8,9 @@ import {
   Home,
   Questions,
   QuestionsPage,
-  Scores,
   About,
   UserPage,
+  Leaderboard,
 } from "./pages";
 import { Switch, Route } from "react-router-dom";
 
@@ -22,7 +22,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route> 
+          </Route>
 
           <Route exact path="/QuestionsPage">
             <NavBar />
@@ -34,10 +34,9 @@ function App() {
             <UserPage />
           </Route>
 
-          <Route path="/scores">
+          <Route path="/leaderboard">
             <NavBar />
-
-            <Scores />
+            <Leaderboard />
           </Route>
 
           <Route path="/about">
