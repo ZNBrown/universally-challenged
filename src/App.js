@@ -8,7 +8,6 @@ import {
   Home,
   Questions,
   QuestionsPage,
-  Scores,
   About,
   UserPage,
   Leaderboard,
@@ -35,7 +34,7 @@ function App() {
             <UserPage />
           </Route>
 
-          <Route path="/scores">
+          <Route path="/leaderboard">
             <NavBar />
             <Leaderboard />
           </Route>
