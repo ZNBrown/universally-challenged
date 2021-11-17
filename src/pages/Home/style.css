@@ -1,0 +1,242 @@
+body {
+    background-color: rgb(233, 231, 208);
+    font-family: 'Kanit', sans-serif;
+}
+
+#title {
+    color: #5D3FD3;
+    font-family: 'Kanit', sans-serif;
+    margin-top: 60px;
+    font-size: 60px;
+}
+
+#cards {
+    position: absolute;
+    left: 5vw;
+    right: 5vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+}
+
+#game-card:hover {
+   
+    color: #289633;
+    transition: 0.5s;
+}
+
+#game-card {
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    background: #46DF55;
+    padding: 5px 40px;
+    margin: 0 10px;
+    border: 1px solid #46DF55;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 0px #289633;
+    -moz-box-shadow: 0px 5px 0px #289633;
+    -ms-box-shadow: 0px 5px 0px #289633;
+    -o-box-shadow: 0px 5px 0px #289633;
+    box-shadow: 0px 5px 0px #289633;
+    color: white;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor: pointer;
+    display:block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#game-card:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
+}
+
+
+#scores-card {
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    background: #27BEEE;
+    padding: 5px 40px;
+    margin: 0 10px;
+    border: 1px solid #27BEEE;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 0px #168baf;
+    -moz-box-shadow: 0px 5px 0px #168baf;
+    -ms-box-shadow: 0px 5px 0px #168baf;
+    -o-box-shadow: 0px 5px 0px #168baf;
+    box-shadow: 0px 5px 0px #168baf;
+    color: white;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor: pointer;
+    display:block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#scores-card:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
+}
+
+
+#questionmark-card{
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    background: #eb8245;
+    padding: 5px 40px;
+    margin: 0 10px;
+    border: 1px solid #eb8245;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 0px #94491e;
+    -moz-box-shadow: 0px 5px 0px #94491e;
+    -ms-box-shadow: 0px 5px 0px #94491e;
+    -o-box-shadow: 0px 5px 0px #94491e;
+    box-shadow: 0px 5px 0px #94491e;
+    color: white;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    
+}
+
+#questionmark-card:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
+}
+
+#about-card  {
+    position: relative;
+    top: 0px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    background: #fa6681;
+    padding: 5px 40px;
+    margin: 0 10px;
+    border: 1px solid #fa6681;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 0px #af263f;
+    -moz-box-shadow: 0px 5px 0px #af263f;
+    -ms-box-shadow: 0px 5px 0px #af263f;
+    -o-box-shadow: 0px 5px 0px #af263f;
+    box-shadow: 0px 5px 0px #af263f;
+    color: white;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor: pointer;
+    display:block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#about-card:active {
+    position: relative;
+    top: 5px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: All 250ms ease;
+    -moz-transition: All 250ms ease;
+    -o-transition: All 250ms ease;
+    -ms-transition: All 250ms ease;
+    transition: All 250ms ease;
+    cursor:pointer;
+}
+
+
+#scores-card:hover {
+    color: #168baf;
+    transition: 0.5s;
+
+}
+
+
+#questionmark-card:hover {
+    color: #94491e;
+    transition: 0.5s;
+
+}
+
+
+#about-card:hover {
+    color: #af263f;
+    transition: 0.5s;
+
+}
