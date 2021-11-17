@@ -85,6 +85,7 @@ const QuestionsPage = () => {
 
     return (
       <div className="time-wrapper">
+        
         <div key={remainingTime} className={`time ${isTimeUp ? "up" : ""}`}>
           {remainingTime}
         </div>
@@ -184,8 +185,12 @@ const QuestionsPage = () => {
               1.3 for "medium" quiz
             </i>
           </h5>
+           <button className="inputButton2" onClick={goHome}>
+            Home
+          </button>
           <br></br>
           <h3>Top Scores</h3>
+
           <LeaderboardTable
             currentUser={{
               username: username,
@@ -197,6 +202,7 @@ const QuestionsPage = () => {
           <button className="inputButton" onClick={goHome}>
             Home
           </button>
+
         </div>
       </>
     );

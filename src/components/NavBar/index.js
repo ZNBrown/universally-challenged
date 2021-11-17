@@ -32,7 +32,7 @@ const NavBar = () => {
     <>
       <div id="btn-container">
         <BackButton />
-        <div ref={navBtn} id="nav-btn-burger" onClick={showNav}>
+        <div aria-label='open nav button' ref={navBtn} id="nav-btn-burger" onClick={showNav}>
           &#9776;
         </div>
       </div>
