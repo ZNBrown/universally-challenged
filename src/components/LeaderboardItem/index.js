@@ -1,10 +1,11 @@
 import React from "react";
 
-export const LeaderboardItem = ({ username, score }) => {
+export const LeaderboardItem = ({ username, score, index }) => {
   return (
     <div>
-      <h1 className="username">{username}</h1>
-      <p>{score}</p>
+      <p>
+        {index}. {username}: {score}
+      </p>
     </div>
   );
 };

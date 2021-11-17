@@ -5,7 +5,8 @@ import { LeaderboardTable } from "../../components";
 export function Leaderboard() {
   return (
     <div>
-      <LeaderboardTable />
+      <h1>Top 10</h1>
+      <LeaderboardTable userData={null} />
     </div>
   );
 }
