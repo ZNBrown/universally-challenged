@@ -9,6 +9,8 @@ class Song extends Component {
                 url = {soundfile}
                 playStatus = {Sound.status.PLAYING}
                 playFromPosition = {2000}
+                volume = {50}
+                loop = {true}
                 onLoading={this.handleSongLoading}
                 onPlaying={this.handleSongPlaying}
                 onFinishedPlaying={this.handleSongFinishedPlaying}
