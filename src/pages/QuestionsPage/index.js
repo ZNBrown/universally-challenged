@@ -104,7 +104,6 @@ const QuestionsPage = () => {
 
     return (
       <div role="questionPage">
-        <div className="backgroundWrapper"></div>
         <Countdown date={Date.now() + 1000} key={countdownKey}>
           <div>
             <div>
@@ -180,12 +179,13 @@ const QuestionsPage = () => {
               1.3 for "medium" quiz
             </i>
           </h5>
+          <button className="inputButton2" onClick={goHome}>
+            Home
+          </button>
           <br></br>
           <h3>Top Scores</h3>
           <LeaderboardTable />
-          <button className="inputButton" onClick={goHome}>
-            Home
-          </button>
+         
         </div>
       </>
     );

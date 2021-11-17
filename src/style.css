@@ -11,9 +11,9 @@ Global Styles
   box-sizing: border-box;
 } */
 body {
-  font-family: "Noto Serif Display", "Raleway", sans-serif;
-  background: lightgrey;
+  font-family: 'Kanit', sans-serif;
   color: #5D3FD3;
+  color: white;
   line-height: 1.5;
   font-size: 0.875rem;
   text-align: center;
@@ -29,7 +29,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Noto Serif Display", sans-serif;
+  font-family: 'Kanit', sans-serif;
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
