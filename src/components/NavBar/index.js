@@ -50,7 +50,6 @@ const NavBar = () => {
           Highscores
         </NavLink>
 
-
         <NavLink onClick={closeNav} className="links" to="/about">
           About
         </NavLink>
