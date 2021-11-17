@@ -1,5 +1,5 @@
 import React from "react";
-import { LeaderboardItem } from "../components";
+import { LeaderboardItem } from "../index.js";
 
 export const LeaderboardTable = ({ scores }) => {
   return (

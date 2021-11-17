@@ -11,6 +11,7 @@ import {
   Scores,
   About,
   UserPage,
+  Leaderboard,
 } from "./pages";
 import { Switch, Route } from "react-router-dom";
 
@@ -22,7 +23,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route> 
+          </Route>
 
           <Route exact path="/QuestionsPage">
             <NavBar />
@@ -36,8 +37,7 @@ function App() {
 
           <Route path="/scores">
             <NavBar />
-
-            <Scores />
+            <Leaderboard />
           </Route>
 
           <Route path="/about">
