@@ -1,9 +1,9 @@
 import React from "react";
 
-export const LeaderboardItem = ({ username, score, index }) => {
+export const LeaderboardItem = ({ username, score, index, className }) => {
   return (
     <div>
-      <p>
+      <p className={className}>
         {index}. {username}: {score}
       </p>
     </div>
