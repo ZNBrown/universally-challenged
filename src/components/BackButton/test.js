@@ -26,7 +26,7 @@ describe('BackButton', () => {
         expect(backBtn.textContent).toEqual('←');        
     })
 
-    test('when clicked it calls the history function to go back a page', () => {
+    test('when clicked it calls history.goBack to go back a page', () => {
         const backBtn = screen.getByLabelText('back button');
         userEvent.click(backBtn);
         expect(history.goBack).toBeCalled;
