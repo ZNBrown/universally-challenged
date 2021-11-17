@@ -1,12 +1,13 @@
 import React from "react";
 
-import "@testing-library/jest-dom";
+import "@testing-library/jest-dom/extend-expect";
 
 import { render } from "@testing-library/react";
+import userEvent from '@testing-library/user-event';
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 
-import { searchReducer } from "../reducers";
+import { questionReducer } from "../reducers";
 
 const TestProviders = ({ initState }) => {
   initState = {
@@ -19,7 +20,7 @@ const TestProviders = ({ initState }) => {
     score: 0,
     userNum: 0,
   };
-  let testReducer = () => searchReducer(initState, { type: "@@INIT" });
+  let testReducer = () => questionReducer(initState, { type: "@@INIT" });
   const testStore = createStore(testReducer);
 
   return ({ children }) => <Provider store={testStore}>{children}</Provider>;
@@ -32,3 +33,4 @@ const renderWithReduxProvider = (ui, options = {}) => {
 
 global.renderWithReduxProvider = renderWithReduxProvider;
 global.React = React;
+global.userEvent = userEvent;
