@@ -4,7 +4,6 @@ import "./style.css";
 import { HomepageSelector } from "../../components";
 
 export function Home() {
-
   return (
     <>
       <h1 id="title">Kahtwoot!</h1>
@@ -14,7 +13,7 @@ export function Home() {
           <HomepageSelector id="game-card" title="New Game" />
         </a>
 
-        <a href="/scores">
+        <a href="/leaderboard">
           <HomepageSelector id="scores-card" title="Highscores" />
         </a>
 
