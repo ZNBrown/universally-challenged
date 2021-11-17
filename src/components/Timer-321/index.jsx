@@ -12,12 +12,12 @@ const Timer321 = () => {
     }
 
     const timer1 = setTimeout(() => {
-      setSeconds(seconds <= 0 ? 3 : seconds - 1);
-    }, 2000);
+      setSeconds(seconds - 1);
+    }, 1500);
 
     const timer2 = setTimeout(() => {
       setRepaintClass(`repaint`);
-    }, 1500);
+    }, 1000);
 
     return () => {
       clearTimeout(timer1);
@@ -37,10 +37,10 @@ const Timer321 = () => {
     }
   }
 
-  if (seconds <= -1) {
+  if (seconds <= 0) {
     return (
       <div>
-        <h1>timer done, add next component here </h1>
+        <h1>timer done, now it must render its children</h1>
       </div>
     );
   }

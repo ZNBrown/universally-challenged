@@ -5,7 +5,7 @@ import { scrubStr, shuffle, resetState, submitAnswer } from "../../actions";
 import { useHistory } from "react-router";
 import axios from "axios";
 import Countdown from "react-countdown";
-import { Timer } from "../../components";
+import { Timer, LeaderboardTable } from "../../components";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
 const QuestionsPage = () => {
@@ -23,13 +23,13 @@ const QuestionsPage = () => {
     console.log("Submit Data is calling");
 
     const req = {
-      name: username,
+      username: username,
       score: currentScore,
-      difficulty: difficulty,
+      // difficulty: difficulty,
     };
 
     axios
-      .post("/api/*", req)
+      .post("https://universally-challenged-server.herokuapp.com/scores/", req)
       .then((response) => {
         console.log(response);
       })
@@ -157,7 +157,6 @@ const QuestionsPage = () => {
                   </button>
                 ))}
               </div>
-             
             </div>
           </div>
         </Countdown>
@@ -180,12 +179,10 @@ const QuestionsPage = () => {
             </i>
           </h5>
           <br></br>
-
+          <h3>Top Scores</h3>
+          <LeaderboardTable />
           <button className="inputButton" onClick={goHome}>
             Home
-          </button>
-          <button className="inputButton" onClick={goLeaderboard}>
-            Leaderboard
           </button>
         </div>
       </>
