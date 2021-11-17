@@ -11,6 +11,7 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 const QuestionsPage = () => {
   const [key, setKey] = useState(0);
   const [countdownKey, setCountdownKey] = useState(0);
+  const userNum = useSelector((state) => state.userNum);
   const username = useSelector((state) => state.username);
   const difficulty = useSelector((state) => state.difficulty);
   const currentScore = useSelector((state) => state.score);
@@ -95,7 +96,7 @@ const QuestionsPage = () => {
     );
   };
 
-  if (currentQuestionIndex <= 9) {
+  if (currentQuestionIndex <= (userNum * 10) - 1) {
     const answers = shuffle([
       ...results[currentQuestionIndex].incorrectAnswers,
       results[currentQuestionIndex].correctAnswer,

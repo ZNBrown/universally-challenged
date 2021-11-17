@@ -16,7 +16,7 @@ const EntryForm = () => {
     e.preventDefault();
     dispatch(loadQuiz(category, difficulty));
     dispatch(addUsername(username));
-    // dispatch(addUserNum(userNum))
+    dispatch(addUserNum(userNum))
     dispatch(updateDifficulty(difficulty));
     history.push("/QuestionsPage");
   };
@@ -63,8 +63,6 @@ const EntryForm = () => {
             min="1" 
             max="4"
             placeholder='1'
-            onMouseOver={(e) => (e.target.placeholder = "")}
-            onMouseOut={(e) => (e.target.placeholder = "Enter amount of players")}
             value={userNum}
             onChange={updateUserNum}
             required
