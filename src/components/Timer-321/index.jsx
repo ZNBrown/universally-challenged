@@ -46,7 +46,7 @@ const Timer321 = () => {
   }
 
   return (
-    <div className="countdown">
+    <div aria-label='grid timer' className="countdown">
       <div className={repaintClass}>{grid}</div>
     </div>
   );
