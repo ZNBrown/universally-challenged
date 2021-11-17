@@ -38,7 +38,7 @@ const EntryForm = () => {
     let names = [];
     for (let i = 1; i <= input; i++)
     {
-      const playerName = `Player ${i}`
+      const playerName = { name: `Player ${i}`, score: 0}
       names.push(playerName)
     }
     console.log("names next")

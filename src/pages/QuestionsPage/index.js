@@ -26,6 +26,10 @@ const QuestionsPage = () => {
   //have currentUser, a number (used to index the users list)
   //describes which user is going now
 
+  const updatePlayer = () => {
+
+  }
+
   const submitData = async () => {
     console.log("Submit Data is calling");
 
@@ -57,7 +61,10 @@ const QuestionsPage = () => {
     console.log(test);
     setKey((prevKey) => prevKey + 1);
     setCountdownKey((prevCountdownKey) => prevCountdownKey + 1);
-    dispatch(submitAnswer(test));
+    let arrayToPass = [test, currentUser]
+    dispatch(submitAnswer(arrayToPass));
+    
+    //userList[currentUser]
   };
 
   function getRandomInt(min, max) {
