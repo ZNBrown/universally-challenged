@@ -14,13 +14,19 @@ export const LeaderboardTable = (props) => {
       try {
         const data = await axios.get(url + "scores/");
         const scoresData = data.data;
-        // console.log("data before", scoresData);
-        // console.log(props.currentUser);
+
         scoresData.push(props.currentUser);
-        // console.log("data after", scoresData);
-        // if (props.currentUser) {
-        // }
-        const sortedScores = scoresData.sort(
+
+        let uniqueScores = [];
+        let uniqueUsernames = [];
+        scoresData.forEach((s) => {
+          if (!uniqueUsernames.includes(s.username)) {
+            console.log(s.username);
+            uniqueScores.push(s);
+            uniqueUsernames.push(s.username);
+          }
+        });
+        const sortedScores = uniqueScores.sort(
           ({ score: a }, { score: b }) => b - a
         );
         setScores(scoresData);

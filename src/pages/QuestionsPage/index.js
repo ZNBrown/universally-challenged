@@ -5,12 +5,13 @@ import { scrubStr, shuffle, resetState, submitAnswer } from "../../actions";
 import { useHistory } from "react-router";
 import axios from "axios";
 import Countdown from "react-countdown";
-import { Timer, LeaderboardTable } from "../../components";
+import { Timer, LeaderboardTable, Timer321 } from "../../components";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { ceil } from "lodash";
 
 const QuestionsPage = () => {
   const [key, setKey] = useState(0);
+  const timer = useRef(null);
   const [countdownKey, setCountdownKey] = useState(0);
   const [currentUser, setCurrentUser] = useState(0);
   const userList = useSelector((state) => state.userList);
@@ -28,29 +29,25 @@ const QuestionsPage = () => {
   //describes which user is going now
 
   const updatePlayer = (currentUser) => {
-    if (currentUser == userNum - 1)
-    {
-      setCurrentUser(0)
+    if (currentUser == userNum - 1) {
+      setCurrentUser(0);
+    } else {
+      setCurrentUser(currentUser + 1);
     }
-    else 
-    {
-      setCurrentUser(currentUser + 1)
-    }
-  }
+  };
 
   const submitData = async (req) => {
-    console.log("i am submit data!")
+    console.log("i am submit data!");
     let latest;
     let postReq = await axios.post(
       "https://universally-challenged-server.herokuapp.com/scores/",
       req
     );
     latest = postReq.data.id;
-    console.log(latest)
+    console.log(latest);
     let response = await axios.delete(
-        `https://universally-challenged-server.herokuapp.com/scores/${latest}`
+      `https://universally-challenged-server.herokuapp.com/scores/${latest}`
     );
-
 
     // for (let index = 0; index < userNum; index++) {
     //   console.log(`index ${index}`)
@@ -66,7 +63,7 @@ const QuestionsPage = () => {
     //   );
     //   console.log("huh")
     //   console.log(response)
-      
+
     // }
   };
 
@@ -81,21 +78,20 @@ const QuestionsPage = () => {
   }
 
   const sendAnswer = (e) => {
-    console.log(currentUser)
-    console.log(userList[currentUser])
+    console.log(currentUser);
+    console.log(userList[currentUser]);
     let test = e.target.value;
     setKey((prevKey) => prevKey + 1);
     setCountdownKey((prevCountdownKey) => prevCountdownKey + 1);
-    let arrayToPass = [test, currentUser]
-    console.log("before submit answer")
-    console.log(userList[currentUser])
+    let arrayToPass = [test, currentUser];
+    console.log("before submit answer");
+    console.log(userList[currentUser]);
     dispatch(submitAnswer(arrayToPass));
-    console.log("after submit answer")
+    console.log("after submit answer");
 
-    console.log(userList[currentUser])
+    console.log(userList[currentUser]);
 
-    updatePlayer(currentUser)
-    
+    updatePlayer(currentUser);
   };
 
   function getRandomInt(min, max) {
@@ -130,7 +126,6 @@ const QuestionsPage = () => {
 
     return (
       <div className="time-wrapper">
-        
         <div key={remainingTime} className={`time ${isTimeUp ? "up" : ""}`}>
           {remainingTime}
         </div>
@@ -146,8 +141,12 @@ const QuestionsPage = () => {
     );
   };
 
+  const loadHandler = () => {
+    const timerHTML = useRef(timer);
+    timerHTML.display = none;
+  };
 
-  if (currentQuestionIndex <=  2) {
+  if (currentQuestionIndex <= 2) {
     const answers = shuffle([
       ...results[currentQuestionIndex].incorrectAnswers,
       results[currentQuestionIndex].correctAnswer,
@@ -155,15 +154,19 @@ const QuestionsPage = () => {
 
     return (
       <div role="questionPage">
-        <h1>{userList[currentUser].name}'s Turn!</h1>
+        <h1>{userList[currentUser].name}, it's your turn!</h1>
         <Countdown date={Date.now() + 1000} key={countdownKey}>
-          <div>
+          <Timer321 ref={timer} />
+          <div onLoad={loadHandler}>
             <div>
               <p className="questionNumber">
-                Round {ceil((currentQuestionIndex + 1)/userNum)}{" "}
+                Round {ceil((currentQuestionIndex + 1) / userNum)}{" "}
               </p>
-              <h3> {userList[currentUser].name}'s score: {userList[currentUser].score} </h3>
-
+              <h3>
+                {" "}
+                {userList[currentUser].name}'s score:{" "}
+                {userList[currentUser].score}{" "}
+              </h3>
             </div>
 
             <div className="timer-wrapper">
@@ -176,12 +179,12 @@ const QuestionsPage = () => {
                   }}
                   key={key}
                   isPlaying
-                  duration={60}
+                  duration={30}
                   colors={[
-                    ["#64DFDF", 0.25],
-                    ["#48BFE3", 0.25],
-                    ["#5E60CE", 0.25],
-                    ["#6930C3", 0.25],
+                    ["#61E287", 0.25],
+                    ["#8EE348", 0.25],
+                    ["#F39F39", 0.25],
+                    ["#E94020", 0.25],
                   ]}
                 >
                   {/* {({ remainingTime }) => remainingTime} */}
@@ -217,7 +220,6 @@ const QuestionsPage = () => {
       </div>
     );
   } else {
-
     // for (let newCoolIndex = 0; newCoolIndex < userNum; newCoolIndex++) {
     //   // console.log(`index ${newCoolIndex}`)
     //   // console.log("guh???")
@@ -228,11 +230,11 @@ const QuestionsPage = () => {
     //   };
 
     //   // console.log("huh")
-    //   
+    //
     // }
     const req = {
       username: username,
-      score: currentScore
+      score: currentScore,
       // difficulty: difficulty,
     };
     submitData(req);
@@ -243,13 +245,15 @@ const QuestionsPage = () => {
           <br></br>
           <h3>Final Score: {currentScore} /10 </h3>
           <br></br>
-          <h5>
+          {/* <h5>
             <i>
               Scores will be adjusted with a multiplier of 1.6 for "hard" and
               1.3 for "medium" quiz
             </i>
-          </h5>
+
+          </h5> */}
            
+
           <br></br>
           <h3>Top Scores</h3>
 
@@ -264,7 +268,6 @@ const QuestionsPage = () => {
           <button className="inputButton" onClick={goHome}>
             Home
           </button>
-
         </div>
       </>
     );
