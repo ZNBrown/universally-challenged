@@ -192,9 +192,7 @@ const QuestionsPage = () => {
               1.3 for "medium" quiz
             </i>
           </h5>
-           <button className="inputButton2" onClick={goHome}>
-            Home
-          </button>
+           
           <br></br>
           <h3>Top Scores</h3>
 
