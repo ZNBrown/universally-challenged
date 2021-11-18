@@ -13,12 +13,17 @@ import {
   Leaderboard,
 } from "./pages";
 import { Switch, Route } from "react-router-dom";
+import { default as Song } from "./components/Song"
+
+
 
 function App() {
   return (
     // <Provider store={store}>
     <div>
+      <Song />
       <main>
+      
         <Switch>
           <Route exact path="/">
             <Home />
@@ -31,6 +36,7 @@ function App() {
 
           <Route path="/UserPage">
             <NavBar />
+            
             <UserPage />
           </Route>
 
@@ -50,7 +56,9 @@ function App() {
           </Route>
         </Switch>
       </main>
+    
     </div>
+   
     // </Provider>
   );
 }
