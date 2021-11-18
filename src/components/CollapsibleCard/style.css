@@ -5,8 +5,9 @@
 }
 
 .toggle {
-    background-color: rgb(233, 231, 208);
-    color: darkgrey;
+    background-color: #5D3FD3;
+    font-family: 'Kanit', sans-serif;
+    color: white;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -20,7 +21,6 @@
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: rgb(233, 231, 208);
 }
 
 .show {
