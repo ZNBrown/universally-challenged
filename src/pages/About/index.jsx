@@ -16,6 +16,10 @@ export function About() {
       <CollapsibleCard label='Instructions'>
       <p>Simply navigate to the menu, and press the new game button to begin a quiz. You can select from a variety of difficulties and topics, from 1 to 4 players.</p>
       </CollapsibleCard>
+      <CollapsibleCard label="FutureFeatures">
+        <p>New countdown timer between questions</p>
+        <Timer321 />
+      </CollapsibleCard>
 
     </section>
   );
