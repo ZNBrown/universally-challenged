@@ -8,7 +8,7 @@ export function Leaderboard() {
     <div>
       <h1 id="title" className="animate__animated animate__tada animate__delay-2s" >Kahtwoot!</h1>
       <h1>Top 10</h1>
-      <LeaderboardTable />
+      <LeaderboardTable currentUser={{}} />
     </div>
   );
 }
