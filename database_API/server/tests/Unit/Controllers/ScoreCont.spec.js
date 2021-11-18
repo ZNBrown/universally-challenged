@@ -52,6 +52,20 @@ describe('Scores controller', () => {
         })
     });
 
+    describe('update', () => {
+        test('it returns a 200 status code on successful update', async () => {
+            let testScore = {
+                id: 1, name: 'Test Score'
+            }
+            jest.spyOn(Score, 'update')
+                .mockResolvedValue(new Score(testScore));
+        
+            const mockReq = { body: {testScore} , params: { id: 1 } }
+            await scoreController.update(mockReq, mockRes);
+            expect(mockStatus).toHaveBeenCalledWith(500);
+        })
+    });
+
     describe('destroy', () => {
         test('it returns a 204 status code on successful deletion', async () => {
             jest.spyOn(Score.prototype, 'del')

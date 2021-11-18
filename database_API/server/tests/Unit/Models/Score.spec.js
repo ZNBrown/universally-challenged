@@ -31,11 +31,21 @@ describe('Score', () => {
     });
 
     describe('create', () => {
-        test('it resolves with dog on successful db query', async () => {
+        test('it resolves with score on successful db query', async () => {
             let scoreData = { username: "test guy", score: 3 }
             jest.spyOn(db, 'query')
                 .mockResolvedValueOnce({rows: [ { ...scoreData, id: 1 }] });
             const result = await Score.create(scoreData);
+            expect(result).toHaveProperty('id')
+        })
+    });
+
+    describe('update', () => {
+        test('it updates with changed score on successful db query', async () => {
+            let scoreData = { username: "test guy", score: 3 }
+            jest.spyOn(db, 'query')
+                .mockResolvedValueOnce({rows: [ { ...scoreData, id: 1 }] });
+            const result = await Score.update(scoreData);
             expect(result).toHaveProperty('id')
         })
     });

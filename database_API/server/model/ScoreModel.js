@@ -50,7 +50,7 @@ class Score {
         })
     }
     //UPDATE
-    update(body){
+    static update(body){
         return new Promise(async (res, rej) => {
             try {
                 let selectQuery = await db.query(`UPDATE scores set score = $2 WHERE id = $1 RETURNING *;`, [this.id, body.score])
