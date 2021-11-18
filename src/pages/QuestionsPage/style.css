@@ -7,7 +7,7 @@ span {
     color:#5D3FD3;
 }
 
-h1 {
+h1, .playerTitle {
     font-family: 'Kanit', sans-serif !important;
     color: #46DF55;
 }
