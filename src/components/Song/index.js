@@ -11,7 +11,7 @@ class Song extends Component {
                 playFromPosition = {2000}
                 volume = {20}
                 loop = {true}
-                muted = "muted"
+                muted = {true}
                 autoload = {true}
                 onLoading={this.handleSongLoading}
                 onPlaying={this.handleSongPlaying}
