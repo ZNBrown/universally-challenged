@@ -313,8 +313,9 @@ h1 {
 
 @media only screen and (max-width: 600px) {
     [idkey ="0"],[idkey ="1"], [idkey ="2"], [idkey ="3"]{
-    width: 230px;
+    width: 160px;
     height:150px;
+    padding: 0 !important;
     }
 }
 
