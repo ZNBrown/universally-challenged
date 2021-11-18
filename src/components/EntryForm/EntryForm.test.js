@@ -19,15 +19,15 @@ describe("SearchForm", () => {
     expect(placeHolderInput).toBeInTheDocument();
   });
   test("Username label exists", () => {
-    let usernameInput = screen.getByLabelText("Username:");
+    let usernameInput = screen.getByLabelText("Team name:");
     expect(usernameInput).toBeInTheDocument();
   });
   test("Difficult Label exists", () => {
-    let difficultyInput = screen.getByLabelText("Category:");
+    let difficultyInput = screen.getByLabelText("Difficulty:");
     expect(difficultyInput).toBeInTheDocument();
   });
   test("Category Label exists", () => {
-    let categoryInput = screen.getByLabelText("Difficulty:");
+    let categoryInput = screen.getByLabelText("Category:");
     expect(categoryInput).toBeInTheDocument();
   });
   test("Selected option for category", () => {

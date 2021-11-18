@@ -157,8 +157,14 @@ const QuestionsPage = () => {
     return (
       <div role="questionPage">
         <h1>{userList[currentUser].name}, it's your turn!</h1>
-        <p className="questionNumber">
-                Round {ceil((currentQuestionIndex + 1)/userNum)}{" "}
+
+        <Countdown date={Date.now() + 1000} key={countdownKey}>
+          {/* <Timer321 ref={timer} /> */}
+          <div onLoad={loadHandler}>
+            <div>
+              <p className="questionNumber">
+                Round {ceil((currentQuestionIndex + 1) / userNum)}{" "}
+
               </p>
         <div>
           <h3 className="userScore"> {userList[currentUser].name} score: {userList[currentUser].score} </h3>

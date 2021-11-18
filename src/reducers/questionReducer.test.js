@@ -12,6 +12,7 @@ describe("question reducer", () => {
       result: [{ question: "", correctAnswer: "", incorrectAnswers: [] }],
       score: 0,
       userNum: 0,
+      userList: [],
     });
   });
 
@@ -24,10 +25,6 @@ describe("question reducer", () => {
     const fakeLoad = questionReducer({ difficulty: "" }, { type: "ADD_DIFFICULTY", payload: "difficult" });
     expect(fakeLoad).toMatchObject({ difficulty: "difficult" });
   });
-//   test("it returns with updated userNum when submitted", () => {
-//     const fakeLoad = questionReducer({ userNum: 0 }, { type: "ADD_USER_NUM", payload: 5 });
-//     expect(fakeLoad).toMatchObject({ userNum: 5 });
-//   });
 
   test("check the quiz and answers load", () => {
     const fakeLike = questionReducer(
@@ -45,26 +42,6 @@ describe("question reducer", () => {
       result: [
         { question: "What type of animal is Clifford?", correctAnswer: "Dog", incorrectAnswers: ["Cat", "Rabbit", "Turtle"] },
       ],
-    });
-  });
-
-  test("it returns with a score of +1 when answer is correct ", () => {
-    const fakeLike = questionReducer(
-      {
-        questionIndex: 0,
-        score: 0,
-        result: [
-          { question: "What type of animal is Clifford?", correctAnswer: "Dog", incorrectAnswers: ["Cat", "Rabbit", "Turtle"] },
-        ],
-      },
-      {
-        type: "ANSWER_SUBMIT",
-        payload: "Dog",
-      }
-    );
-    expect(fakeLike).toMatchObject({
-      questionIndex: 1,
-      score: 1,
     });
   });
 

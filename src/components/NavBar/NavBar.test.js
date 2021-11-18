@@ -53,7 +53,6 @@ describe("NavBar", () => {
   test('it renders a new page when a link is clicked', () => {
     const homepageLink = screen.getByLabelText('homepage link');
     userEvent.click(homepageLink);
-    const nav = screen.queryByRole('navigation');
     expect(history.push).toBeCalled;
   })
 });
