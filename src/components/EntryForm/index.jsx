@@ -82,7 +82,7 @@ const EntryForm = () => {
         <h2 className="titleIntro"> Let's start a quiz! </h2>
         <form aria-label='userForm' role='form' onSubmit={handleSubmit}>
         <label className="userNum" placeholder='How many players' htmlFor='userNum'>
-            Players:
+            Players (1-4):
           </label>
           <input
             id='userNum'
