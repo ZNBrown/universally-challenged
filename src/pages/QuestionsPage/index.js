@@ -245,12 +245,14 @@ const QuestionsPage = () => {
           <br></br>
           <h3>Final Score: {currentScore} /10 </h3>
           <br></br>
-          <h5>
+          {/* <h5>
             <i>
               Scores will be adjusted with a multiplier of 1.6 for "hard" and
               1.3 for "medium" quiz
             </i>
-          </h5>
+
+          </h5> */}
+           
 
           <br></br>
           <h3>Top Scores</h3>
