@@ -14,10 +14,10 @@ export const LeaderboardTable = (props) => {
       try {
         const data = await axios.get(url + "scores/");
         const scoresData = data.data;
-        console.log("data before", scoresData);
-        console.log(props.currentUser);
+        // console.log("data before", scoresData);
+        // console.log(props.currentUser);
         scoresData.push(props.currentUser);
-        console.log("data after", scoresData);
+        // console.log("data after", scoresData);
         // if (props.currentUser) {
         // }
         const sortedScores = scoresData.sort(

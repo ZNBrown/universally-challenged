@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { loadQuiz, addUsername, updateDifficulty, resetState, addUserNum, addUserList } from "../../actions";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./style.css";
 
 const EntryForm = () => {
+  const usernameInputs = useRef(null)
   const [username, setUsername] = useState("");
   const [userList, setUserList] = useState([]);
   const [userNum, setUserNum] = useState("");
@@ -12,6 +13,14 @@ const EntryForm = () => {
   const [difficulty, setDifficulty] = useState("");
   const dispatch = useDispatch();
   const history = useHistory();
+
+  useEffect( () => {
+    // const loadUsernameInputs = () =>
+    // {
+    //   return (userList.map((a,i) => <UsernameForm keyId={i}/>))
+    // }
+    // console.log(loadUsernameInputs)
+  }, [userNum]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,11 +47,9 @@ const EntryForm = () => {
     let names = [];
     for (let i = 1; i <= input; i++)
     {
-      const playerName = `Player ${i}`
+      const playerName = { name: `Player ${i}`, score: 0}
       names.push(playerName)
     }
-    console.log("names next")
-    console.log(names)
     setUserList(names)
   
   };
@@ -56,6 +63,12 @@ const EntryForm = () => {
     const input = e.target.value;
     setDifficulty(input);
   };
+
+
+
+
+
+  
 
 
 
@@ -81,8 +94,9 @@ const EntryForm = () => {
             onChange={updateUserNum}
             required
           />
+          <div ref={usernameInputs}>
           <label className="username" placeholder='Enter Username' htmlFor='username'>
-            Username:
+            Team name:
           </label>
           <input
             id='username'
@@ -93,6 +107,7 @@ const EntryForm = () => {
             onChange={updateUsername}
             required
           />
+          </div>
           <label className="category" htmlFor='categorySelect'>
             Category:
           </label>

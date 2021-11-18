@@ -23,8 +23,10 @@ const initState = {
       case "ADD_USER_LIST":
         return { ...state, userList: action.payload, error: false };
       case "ANSWER_SUBMIT":
-        if (action.payload === state.result[state.questionIndex].correctAnswer) {
-          return { ...state, score: state.score + 1, questionIndex: state.questionIndex + 1 };
+        if (action.payload[0] === state.result[state.questionIndex].correctAnswer) {
+          let newserList = state.userList;
+          newserList[action.payload[1]].score = newserList[action.payload[1]].score + 1;
+          return { ...state, score: state.score + 1,  userList: newserList, questionIndex: state.questionIndex + 1 };
         }
         return { ...state, questionIndex: state.questionIndex + 1 };
       case "RESET":

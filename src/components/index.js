@@ -7,4 +7,5 @@ export { Timer321 } from "./Timer-321";
 export { CollapsibleCard } from "./CollapsibleCard";
 export { LeaderboardItem } from "./LeaderboardItem";
 export { LeaderboardTable } from "./LeaderboardTable";
+export { UsernameForm } from "./UsernameForm";
 export { default as Song } from "./Song";
