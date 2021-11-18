@@ -53,7 +53,7 @@ describe("Question Actions", () => {
 
   it("Dispatches loadQuiz", ()=> {
       const expectedAction = [{ type:"LOAD_QUIZ", payload: target }];
-      store.dispatch(loadQuiz());
+      loadQuiz();
       const actions = store.getActions();
       expect(store.getActions()).toEqual(expectedAction);
   })

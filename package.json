@@ -11,9 +11,9 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/reducer/**",
+      "src/reducers/questionReducer.js",
       "src/components/**",
-      "src/actions/index.js",
+      "!src/actions/index.js",
       "!src/components/index.js",
       "!src/components/Song/**"   
     ],

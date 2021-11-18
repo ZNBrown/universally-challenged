@@ -47,7 +47,7 @@ describe("SearchForm", () => {
     const handleSubmit = jest.fn();
     const form = screen.getByLabelText('userForm');
     const onSubmit = jest.fn();
-    // userEvent.upload(form);
+    expect(onSubmit(form));
     expect(handleSubmit).toBeCalled;
   })
 });
