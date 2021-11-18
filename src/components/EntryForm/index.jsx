@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import { loadQuiz, addUsername, updateDifficulty, resetState, addUserNum, addUserList } from "../../actions";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { UsernameForm } from "..";
 import "./style.css";
 
 const EntryForm = () => {
