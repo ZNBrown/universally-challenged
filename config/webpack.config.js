@@ -1,4 +1,5 @@
 const path = require('path');
+var SRC = path.resolve(__dirname, 'src/index.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const ROOT_DIRECTORY = path.join(__dirname, '../'); // the root of your project
@@ -26,6 +27,7 @@ const config = {
     new HtmlWebpackPlugin({
       // used to add the JavaScript code to the HTML
       template: path.join(PUBLIC_DIRECTORY, 'index.html'),
+      favicon: "./public/favicon.ICO"
     }),
   ],
   module: {
@@ -50,6 +52,14 @@ const config = {
         test: /\.(png|svg|jpg|gif|pdf)$/,
         use: ["file-loader"],
       }, // transpile image files
+      
+      {
+        test: /\.mp3$/,
+        loader: 'file-loader',
+        options: {
+            name: '[path][name].[ext]'
+        }
+    },
 
       {
         test: /\.s[ac]ss$/i,

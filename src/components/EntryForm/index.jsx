@@ -1,21 +1,34 @@
-import React, { useState } from "react";
-import { loadQuiz, addUsername, updateDifficulty, resetState } from "../../actions";
+import React, { useRef, useState, useEffect } from "react";
+import { loadQuiz, addUsername, updateDifficulty, resetState, addUserNum, addUserList } from "../../actions";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./style.css";
 
 const EntryForm = () => {
+  const usernameInputs = useRef(null)
   const [username, setUsername] = useState("");
+  const [userList, setUserList] = useState([]);
+  const [userNum, setUserNum] = useState("");
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const dispatch = useDispatch();
   const history = useHistory();
 
+  useEffect( () => {
+    // const loadUsernameInputs = () =>
+    // {
+    //   return (userList.map((a,i) => <UsernameForm keyId={i}/>))
+    // }
+    // console.log(loadUsernameInputs)
+  }, [userNum]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(loadQuiz(category, difficulty));
     dispatch(addUsername(username));
+    dispatch(addUserNum(userNum))
     dispatch(updateDifficulty(difficulty));
+    dispatch(addUserList(userList))
     history.push("/QuestionsPage");
   };
 
@@ -28,6 +41,19 @@ const EntryForm = () => {
     setUsername(input);
   };
 
+  const updateUserNum = (e) => {
+    const input = e.target.value;
+    setUserNum(input);
+    let names = [];
+    for (let i = 1; i <= input; i++)
+    {
+      const playerName = { name: `Player ${i}`, score: 0}
+      names.push(playerName)
+    }
+    setUserList(names)
+  
+  };
+
   const updateCategory = (e) => {
     const input = e.target.value;
     setCategory(input);
@@ -38,6 +64,14 @@ const EntryForm = () => {
     setDifficulty(input);
   };
 
+
+
+
+
+  
+
+
+
   return (
     <>
       {reset()}
@@ -47,8 +81,22 @@ const EntryForm = () => {
         </div>
         <h2 className="titleIntro"> Let's start a quiz! </h2>
         <form aria-label='userForm' role='form' onSubmit={handleSubmit}>
+        <label className="userNum" placeholder='How many players' htmlFor='userNum'>
+            Players (1-4):
+          </label>
+          <input
+            id='userNum'
+            type='number'
+            min="1" 
+            max="4"
+            placeholder='1'
+            value={userNum}
+            onChange={updateUserNum}
+            required
+          />
+          <div ref={usernameInputs}>
           <label className="username" placeholder='Enter Username' htmlFor='username'>
-            Username:
+            Team name:
           </label>
           <input
             id='username'
@@ -59,6 +107,7 @@ const EntryForm = () => {
             onChange={updateUsername}
             required
           />
+          </div>
           <label className="category" htmlFor='categorySelect'>
             Category:
           </label>
