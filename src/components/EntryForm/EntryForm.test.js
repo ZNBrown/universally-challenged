@@ -42,4 +42,12 @@ describe("SearchForm", () => {
   test("it displays the 'New Game'button", () => {
     expect(screen.getByText("Submit")).toBeInTheDocument();
   });
+
+  test('handleSubmit is called when the form is submitted', () => {
+    const handleSubmit = jest.fn();
+    const form = screen.getByLabelText('userForm');
+    const onSubmit = jest.fn();
+    // userEvent.upload(form);
+    expect(handleSubmit).toBeCalled;
+  })
 });

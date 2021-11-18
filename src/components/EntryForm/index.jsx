@@ -64,14 +64,6 @@ const EntryForm = () => {
     setDifficulty(input);
   };
 
-
-
-
-
-  
-
-
-
   return (
     <>
       {reset()}

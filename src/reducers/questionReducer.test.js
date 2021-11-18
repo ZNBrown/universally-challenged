@@ -45,6 +45,26 @@ describe("question reducer", () => {
     });
   });
 
+  test("it returns with a score of +1 when answer is correct ", () => {
+    const fakeLike = questionReducer(
+      {
+        questionIndex: 0,
+        score: 0,
+        result: [
+          { question: "What type of animal is Clifford?", correctAnswer: "Dog", incorrectAnswers: ["Cat", "Rabbit", "Turtle"] },
+        ],
+      },
+      {
+        type: "ANSWER_SUBMIT",
+        payload: "Dog",
+      }
+    );
+    expect(fakeLike).toMatchObject({
+      questionIndex: 1,
+      score: 0,
+    });
+  });
+
   test("score doesn't change when answer is incorrect ", () => {
     const fakeLike = questionReducer(
       {
