@@ -14,8 +14,6 @@ export function Home() {
           <HomepageSelector href="/leaderboard" id="scores-card" title="Highscores" />
 
           <HomepageSelector href="/about" id="about-card" title="About" />
-
-          <HomepageSelector href="/???" id="questionmark-card" title="???" />
       </div>
     </>
   );
