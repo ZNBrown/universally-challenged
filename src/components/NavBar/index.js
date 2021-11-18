@@ -46,7 +46,7 @@ const NavBar = () => {
           New Game
         </NavLink>
         
-        <NavLink aria-label='highscores link' onClick={closeNav} className="links" to="/scores">
+        <NavLink aria-label='highscores link' onClick={closeNav} className="links" to="/leaderboard">
           Highscores
         </NavLink>
 
