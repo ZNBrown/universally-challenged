@@ -8,3 +8,4 @@ export { CollapsibleCard } from "./CollapsibleCard";
 export { LeaderboardItem } from "./LeaderboardItem";
 export { LeaderboardTable } from "./LeaderboardTable";
 export { UsernameForm } from "./UsernameForm";
+export { default as Song } from "./Song";
