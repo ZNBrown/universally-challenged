@@ -38,15 +38,11 @@ const Timer321 = () => {
   }
 
   if (seconds <= 0) {
-    return (
-      <div>
-        <h1>timer done, now it must render its children</h1>
-      </div>
-    );
+    return <div></div>;
   }
 
   return (
-    <div aria-label='grid timer' className="countdown">
+    <div aria-label="grid timer" className="countdown">
       <div className={repaintClass}>{grid}</div>
     </div>
   );
