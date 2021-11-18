@@ -176,12 +176,12 @@ const QuestionsPage = () => {
                   }}
                   key={key}
                   isPlaying
-                  duration={60}
+                  duration={30}
                   colors={[
-                    ["#64DFDF", 0.25],
-                    ["#48BFE3", 0.25],
-                    ["#5E60CE", 0.25],
-                    ["#6930C3", 0.25],
+                    ["#61E287", 0.25],
+                    ["#8EE348", 0.25],
+                    ["#F39F39", 0.25],
+                    ["#E94020", 0.25],
                   ]}
                 >
                   {/* {({ remainingTime }) => remainingTime} */}
