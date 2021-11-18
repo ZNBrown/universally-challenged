@@ -5,9 +5,11 @@ import { scrubStr, shuffle, resetState, submitAnswer } from "../../actions";
 import { useHistory } from "react-router";
 import axios from "axios";
 import Countdown from "react-countdown";
-import { Timer, LeaderboardTable, Timer321 } from "../../components";
+import { Timer, LeaderboardTable } from "../../components";
+import { Timer321 } from "../../components";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { ceil } from "lodash";
+import 'animate.css';
 
 const QuestionsPage = () => {
   const [key, setKey] = useState(0);
@@ -146,7 +148,7 @@ const QuestionsPage = () => {
     timerHTML.display = none;
   };
 
-  if (currentQuestionIndex <= 2) {
+  if (currentQuestionIndex <= 9) {
     const answers = shuffle([
       ...results[currentQuestionIndex].incorrectAnswers,
       results[currentQuestionIndex].correctAnswer,
@@ -155,19 +157,25 @@ const QuestionsPage = () => {
     return (
       <div role="questionPage">
         <h1>{userList[currentUser].name}, it's your turn!</h1>
+
         <Countdown date={Date.now() + 1000} key={countdownKey}>
           {/* <Timer321 ref={timer} /> */}
           <div onLoad={loadHandler}>
             <div>
               <p className="questionNumber">
                 Round {ceil((currentQuestionIndex + 1) / userNum)}{" "}
+
               </p>
-              <h3>
+        <div>
+          <h3 className="userScore"> {userList[currentUser].name} score: {userList[currentUser].score} </h3>
+        </div>
+        <p className="questionTitle">
                 {" "}
-                {userList[currentUser].name}'s score:{" "}
-                {userList[currentUser].score}{" "}
-              </h3>
-            </div>
+                {scrubStr(results[currentQuestionIndex].question)}{" "}
+              </p>
+        <Countdown date={Date.now() + 3000} key={countdownKey}>
+          <div>
+          
 
             <div className="timer-wrapper">
               <h1>
@@ -195,10 +203,10 @@ const QuestionsPage = () => {
 
             <br></br>
             <div>
-              <p className="questionTitle">
+              {/* <p className="questionTitle">
                 {" "}
                 {scrubStr(results[currentQuestionIndex].question)}{" "}
-              </p>
+              </p> */}
 
               <div className="answersGrid">
                 {answers.map((t, i) => (
@@ -241,7 +249,7 @@ const QuestionsPage = () => {
     return (
       <>
         <div>
-          <h1> The quiz is finished! </h1>
+          <h1 className="animate__animated animate__tada animate__infinite"> The quiz is finished! </h1>
           <br></br>
           <h3>Final Score: {currentScore} /10 </h3>
           <br></br>

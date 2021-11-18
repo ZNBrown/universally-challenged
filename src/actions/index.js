@@ -70,7 +70,9 @@ export const scrubStr = (str) => {
     .replaceAll("&amp; ", " & ")
     .replaceAll("&oacute;", "o")
     .replaceAll("&uuml;", "u")
-    .replaceAll("&ouml;", "o");
+    .replaceAll("&ouml;", "o")
+    .replaceAll("&ldquo;)", '"')
+    .replaceAll("&rdquo;)", '"');
     
 
   return cleanStr;
