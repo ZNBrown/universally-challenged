@@ -148,7 +148,7 @@ const QuestionsPage = () => {
     timerHTML.display = none;
   };
 
-  if (currentQuestionIndex <= 2) {
+  if (currentQuestionIndex <= 9) {
     const answers = shuffle([
       ...results[currentQuestionIndex].incorrectAnswers,
       results[currentQuestionIndex].correctAnswer,
