@@ -7,7 +7,6 @@ import axios from "axios";
 import Countdown from "react-countdown";
 import { Timer, LeaderboardTable } from "../../components";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
-import { clientsClaim } from "workbox-core";
 import { ceil } from "lodash";
 
 const QuestionsPage = () => {
@@ -39,23 +38,36 @@ const QuestionsPage = () => {
     }
   }
 
-  const submitData = async () => {
-    console.log("Submit Data is calling");
+  const submitData = async (req) => {
+    console.log("i am submit data!")
+    let latest;
+    let postReq = await axios.post(
+      "https://universally-challenged-server.herokuapp.com/scores/",
+      req
+    );
+    latest = postReq.data.id;
+    console.log(latest)
+    let response = await axios.delete(
+        `https://universally-challenged-server.herokuapp.com/scores/${latest}`
+    );
 
 
-    for (let index = 0; index < userNum; index++) {
-      const req = {
-        username: userList[index].name,
-        score: userList[index].score,
-        // difficulty: difficulty,
-      };
-      const response = await axios.post(
-        "https://universally-challenged-server.herokuapp.com/scores/",
-        req
-      );
-      console.log(response)
+    // for (let index = 0; index < userNum; index++) {
+    //   console.log(`index ${index}`)
+    //   console.log("guh???")
+    //   const req = {
+    //     username: userList[index].name,
+    //     score: userList[index].score,
+    //     // difficulty: difficulty,
+    //   };
+    //   const response = await axios.post(
+    //     "https://universally-challenged-server.herokuapp.com/scores/",
+    //     req
+    //   );
+    //   console.log("huh")
+    //   console.log(response)
       
-    }
+    // }
   };
 
   function goHome() {
@@ -72,11 +84,16 @@ const QuestionsPage = () => {
     console.log(currentUser)
     console.log(userList[currentUser])
     let test = e.target.value;
-    console.log(test);
     setKey((prevKey) => prevKey + 1);
     setCountdownKey((prevCountdownKey) => prevCountdownKey + 1);
     let arrayToPass = [test, currentUser]
+    console.log("before submit answer")
+    console.log(userList[currentUser])
     dispatch(submitAnswer(arrayToPass));
+    console.log("after submit answer")
+
+    console.log(userList[currentUser])
+
     updatePlayer(currentUser)
     
   };
@@ -130,7 +147,7 @@ const QuestionsPage = () => {
   };
 
 
-  if (currentQuestionIndex <=  9) {
+  if (currentQuestionIndex <=  2) {
     const answers = shuffle([
       ...results[currentQuestionIndex].incorrectAnswers,
       results[currentQuestionIndex].correctAnswer,
@@ -200,8 +217,25 @@ const QuestionsPage = () => {
       </div>
     );
   } else {
-    console.log("second-", currentQuestionIndex);
-    submitData();
+
+    // for (let newCoolIndex = 0; newCoolIndex < userNum; newCoolIndex++) {
+    //   // console.log(`index ${newCoolIndex}`)
+    //   // console.log("guh???")
+    //   const req = {
+    //     username: userList[newCoolIndex].name,
+    //     score: userList[newCoolIndex].score,
+    //     // difficulty: difficulty,
+    //   };
+
+    //   // console.log("huh")
+    //   
+    // }
+    const req = {
+      username: username,
+      score: currentScore
+      // difficulty: difficulty,
+    };
+    submitData(req);
     return (
       <>
         <div>
