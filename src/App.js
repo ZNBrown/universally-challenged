@@ -6,7 +6,6 @@ import { NavBar } from "./components";
 // import store from "./store";
 import {
   Home,
-  Questions,
   QuestionsPage,
   About,
   UserPage,

@@ -33,7 +33,7 @@ export const LeaderboardTable = (props) => {
   }, []);
 
   return (
-    <div>
+    <div aria-label='leaderboard'>
       {topTen.map((score, index) => {
         return <LeaderboardItem key={score.id} {...score} index={index + 1} />;
       })}

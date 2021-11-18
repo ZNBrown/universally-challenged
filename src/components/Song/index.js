@@ -16,6 +16,7 @@ class Song extends Component {
                 onLoading={this.handleSongLoading}
                 onPlaying={this.handleSongPlaying}
                 onFinishedPlaying={this.handleSongFinishedPlaying}
+                aria-label='song component'
              />
         )
     }
