@@ -3,6 +3,7 @@ import { loadQuiz, addUsername, updateDifficulty, resetState, addUserNum, addUse
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./style.css";
+import "animate.css";
 
 const EntryForm = () => {
   const usernameInputs = useRef(null)
@@ -77,7 +78,7 @@ const EntryForm = () => {
       {reset()}
       <div>
         <div>
-          <h1 className="titleHeading">Kahtwoot!</h1>
+          <h1 id="title" className="animate__animated animate__tada animate__delay-2s" >Kahtwoot!</h1>
         </div>
         <h2 className="titleIntro"> Let's start a quiz! </h2>
         <form aria-label='userForm' role='form' onSubmit={handleSubmit}>
