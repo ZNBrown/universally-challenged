@@ -352,3 +352,46 @@ h1 {
         overflow-x:hidden;
     }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+h1 {
+  font-family: "Roboto" !important;
+  text-align: center;
+}
+
+.timer-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.time-wrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  font-size: 60px;
+  font-family: "Montserrat";
+}
+
+.time-wrapper .time {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+.time-wrapper .time.up {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.time-wrapper .time.down {
+  opacity: 0;
+  transform: translateY(100%);
+}
