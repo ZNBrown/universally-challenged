@@ -154,7 +154,7 @@ const QuestionsPage = () => {
 
     return (
       <div role="questionPage">
-        <h1>{userList[currentUser].name}'s Turn!</h1>
+        <h1>{userList[currentUser].name}, it's your turn!</h1>
         <Countdown date={Date.now() + 1000} key={countdownKey}>
           <Timer321 ref={timer} />
           <div onLoad={loadHandler}>
@@ -179,12 +179,12 @@ const QuestionsPage = () => {
                   }}
                   key={key}
                   isPlaying
-                  duration={60}
+                  duration={30}
                   colors={[
-                    ["#64DFDF", 0.25],
-                    ["#48BFE3", 0.25],
-                    ["#5E60CE", 0.25],
-                    ["#6930C3", 0.25],
+                    ["#61E287", 0.25],
+                    ["#8EE348", 0.25],
+                    ["#F39F39", 0.25],
+                    ["#E94020", 0.25],
                   ]}
                 >
                   {/* {({ remainingTime }) => remainingTime} */}
