@@ -41,8 +41,6 @@ const EntryForm = () => {
       const playerName = { name: `Player ${i}`, score: 0}
       names.push(playerName)
     }
-    console.log("names next")
-    console.log(names)
     setUserList(names)
   
   };

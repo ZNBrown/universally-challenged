@@ -26,7 +26,6 @@ const initState = {
         console.log(state.userList[action.payload[1]])
         let newserList = state.userList;
         newserList[action.payload[1]].score = newserList[action.payload[1]].score + 1;
-        console.log(newserList);
         if (action.payload[0] === state.result[state.questionIndex].correctAnswer) {
           return { ...state, score: state.score + 1,  userList: newserList, questionIndex: state.questionIndex + 1 };
         }
