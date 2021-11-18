@@ -9,7 +9,7 @@ class Song extends Component {
                 url = {soundfile}
                 playStatus = {Sound.status.PLAYING}
                 playFromPosition = {2000}
-                volume = {40}
+                volume = {20}
                 loop = {true}
                 onLoading={this.handleSongLoading}
                 onPlaying={this.handleSongPlaying}
