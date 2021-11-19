@@ -45,12 +45,6 @@ const QuestionsPage = () => {
       "https://universally-challenged-server.herokuapp.com/scores/",
       req
     );
-    latest = postReq.data.id;
-    console.log(latest);
-    let response = await axios.delete(
-      `https://universally-challenged-server.herokuapp.com/scores/${latest}`
-    );
-
     // for (let index = 0; index < userNum; index++) {
     //   console.log(`index ${index}`)
     //   console.log("guh???")
@@ -148,7 +142,7 @@ const QuestionsPage = () => {
     timerHTML.display = none;
   };
 
-  if (currentQuestionIndex <= 9) {
+  if (currentQuestionIndex <= (10 * userNum) - 1) {
     const answers = shuffle([
       ...results[currentQuestionIndex].incorrectAnswers,
       results[currentQuestionIndex].correctAnswer,
