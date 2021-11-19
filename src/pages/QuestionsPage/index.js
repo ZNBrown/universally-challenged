@@ -142,7 +142,7 @@ const QuestionsPage = () => {
     timerHTML.display = none;
   };
 
-  if (currentQuestionIndex <= (10 * userNum) - 1) {
+  if (currentQuestionIndex <= (3 * userNum) - 1) {
     const answers = shuffle([
       ...results[currentQuestionIndex].incorrectAnswers,
       results[currentQuestionIndex].correctAnswer,
